@@ -1,8 +1,12 @@
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
 import org.opencv.core.Core;
 import org.opencv.core.Mat;
 import org.opencv.core.Point;
 import org.opencv.core.Scalar;
 import org.opencv.highgui.Highgui;
+import org.opencv.imgproc.Imgproc;
 
 public class Show_Time_test01 {
     static{
@@ -11,17 +15,21 @@ public class Show_Time_test01 {
 
     public static void main(String[] args) {
     	//int i = 1;
+	   	Date date = new Date();
+	   	SimpleDateFormat sdf1 = new SimpleDateFormat("yyyy_MM_dd_HH_mm_ss");
+	   	SimpleDateFormat sdf2 = new SimpleDateFormat("yyyy/MM/dd HH:mm:ss");
 	   	System.out.println("start");
+	   	System.out.println(sdf1.format(date));
         String path_in = "kame_2592_1944.png";
-        String path_out = "show_time.png";
+        String path_out = sdf1.format(date)+".png";
 
         Mat mat_src = new Mat();
         Mat mat_dst = new Mat();
 
         mat_src = Highgui.imread(path_in);                         // 入力画像の読み込み
-        Core.putText(mat_src, "2016/10/14  18:49:30", new Point(300, 800), Core.FONT_HERSHEY_SIMPLEX, 1.6f, new Scalar(20, 0, 200), 4);
+        Core.putText(mat_src, sdf2.format(date), new Point(300, 800), Core.FONT_HERSHEY_SIMPLEX, 1.6f, new Scalar(0, 0, 0), 4);
 
-        //Imgproc.cvtColor(mat_src, mat_dst, Imgproc.COLOR_BGR2GRAY); // カラー画像をグレー画像に変換
+        Imgproc.cvtColor(mat_src, mat_dst, Imgproc.COLOR_BGR2GRAY); // カラー画像をグレー画像に変換
         Highgui.imwrite(path_out, mat_dst);                         // 出力画像を保存
 
         //
