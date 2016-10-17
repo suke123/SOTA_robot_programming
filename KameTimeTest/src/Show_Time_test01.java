@@ -23,13 +23,11 @@ public class Show_Time_test01 {
         String path_out = "images/"+sdf1.format(date)+".png";     //画像を出力時の時刻の名前で保存
 
         Mat mat_src = new Mat();
-        Mat mat_dst = new Mat();
 
         mat_src = Highgui.imread(path_in);                         // 入力画像の読み込み
-        Core.putText(mat_src, sdf2.format(date), new Point(0, 0), Core.FONT_HERSHEY_SIMPLEX, 1.6f, new Scalar(0, 0, 0), 3);
+        Core.putText(mat_src, sdf2.format(date), new Point(2000, 1900), Core.FONT_HERSHEY_SIMPLEX, 1.6f, new Scalar(0, 0, 0), 3);
 
-        //Imgproc.cvtColor(mat_src, mat_dst, Imgproc.COLOR_BGR2GRAY); // カラー画像をグレー画像に変換
-        Highgui.imwrite(path_out, mat_dst);                         // 出力画像を保存
+        Highgui.imwrite(path_out, mat_src);                         // 出力画像を保存
     }
 
 }
