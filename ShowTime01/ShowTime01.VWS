@@ -7,28 +7,38 @@
 	<_globalVariables>
 		<MemberValueObject>
 			<initialize>new CRobotMem()</initialize>
+			<memberVariableLine>0</memberVariableLine>
 			<name>mem</name>
+			<parentPb i:nil="true" />
 			<type>CRobotMem</type>
 		</MemberValueObject>
 		<MemberValueObject>
 			<initialize>new CSotaMotion(mem)</initialize>
+			<memberVariableLine>0</memberVariableLine>
 			<name>motion</name>
+			<parentPb i:nil="true" />
 			<type>CSotaMotion</type>
 		</MemberValueObject>
 		<MemberValueObject>
 			<initialize>true</initialize>
+			<memberVariableLine>0</memberVariableLine>
 			<name>InitServoOn</name>
+			<parentPb i:nil="true" />
 			<type>boolean</type>
 		</MemberValueObject>
 		<MemberValueObject>
 			<initialize>true</initialize>
+			<memberVariableLine>0</memberVariableLine>
 			<name>TRUE</name>
+			<parentPb i:nil="true" />
 			<type>boolean</type>
 		</MemberValueObject>
 	</_globalVariables>
 	<_import xmlns:d2p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays">
 		<d2p1:string>jp.vstone.RobotLib.*</d2p1:string>
 		<d2p1:string>jp.vstone.sotatalk.SpeechRecog.*</d2p1:string>
+		<d2p1:string>jp.vstone.camera.*</d2p1:string>
+		<d2p1:string>jp.vstone.sotatalk.*</d2p1:string>
 	</_import>
 	<_isDisableCollidionDetect>false</_isDisableCollidionDetect>
 	<_isSetAutoExecute>false</_isSetAutoExecute>
@@ -36,6 +46,16 @@
 	<_manifestClassPath xmlns:d2p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
 	<_target>Sota</_target>
 	<_templeteMainClassFilePath>src\mainTemplete.source</_templeteMainClassFilePath>
+	<appPropaty>
+		<_AppTitle>ShowTime01</_AppTitle>
+		<_ApplicationType>App</_ApplicationType>
+		<_ExecOption></_ExecOption>
+		<_StartSoundFile></_StartSoundFile>
+		<_Trigger>Button</_Trigger>
+		<_TriggerOperation></_TriggerOperation>
+		<_WorkingDirectory>ShowTime01/</_WorkingDirectory>
+		<jarFileName>ShowTime01.jar</jarFileName>
+	</appPropaty>
 	<defaultInipos>0</defaultInipos>
 	<defaultRobotUsers>0</defaultRobotUsers>
 	<iniPoses>
@@ -337,6 +357,7 @@
 				<PutLR>LEFT</PutLR>
 				<SpinStep>10</SpinStep>
 				<_isRawParam>false</_isRawParam>
+				<_isReverseOutputParam>false</_isReverseOutputParam>
 				<_paramUnitName i:nil="true" />
 				<_putParamGain>1</_putParamGain>
 				<limit_h>1500</limit_h>
@@ -360,6 +381,7 @@
 				<PutLR>LEFT</PutLR>
 				<SpinStep>10</SpinStep>
 				<_isRawParam>false</_isRawParam>
+				<_isReverseOutputParam>false</_isReverseOutputParam>
 				<_paramUnitName>°</_paramUnitName>
 				<_putParamGain>0.1</_putParamGain>
 				<limit_h>1500</limit_h>
@@ -383,6 +405,7 @@
 				<PutLR>LEFT</PutLR>
 				<SpinStep>10</SpinStep>
 				<_isRawParam>false</_isRawParam>
+				<_isReverseOutputParam>false</_isReverseOutputParam>
 				<_paramUnitName>°</_paramUnitName>
 				<_putParamGain>0.1</_putParamGain>
 				<limit_h>900</limit_h>
@@ -406,6 +429,7 @@
 				<PutLR>LEFT</PutLR>
 				<SpinStep>10</SpinStep>
 				<_isRawParam>false</_isRawParam>
+				<_isReverseOutputParam>false</_isReverseOutputParam>
 				<_paramUnitName>°</_paramUnitName>
 				<_putParamGain>0.1</_putParamGain>
 				<limit_h>650</limit_h>
@@ -429,6 +453,7 @@
 				<PutLR>RIGHT</PutLR>
 				<SpinStep>10</SpinStep>
 				<_isRawParam>false</_isRawParam>
+				<_isReverseOutputParam>false</_isReverseOutputParam>
 				<_paramUnitName>°</_paramUnitName>
 				<_putParamGain>0.1</_putParamGain>
 				<limit_h>1500</limit_h>
@@ -452,6 +477,7 @@
 				<PutLR>RIGHT</PutLR>
 				<SpinStep>10</SpinStep>
 				<_isRawParam>false</_isRawParam>
+				<_isReverseOutputParam>false</_isReverseOutputParam>
 				<_paramUnitName>°</_paramUnitName>
 				<_putParamGain>0.1</_putParamGain>
 				<limit_h>900</limit_h>
@@ -475,6 +501,7 @@
 				<PutLR>LEFT</PutLR>
 				<SpinStep>10</SpinStep>
 				<_isRawParam>false</_isRawParam>
+				<_isReverseOutputParam>false</_isReverseOutputParam>
 				<_paramUnitName>°</_paramUnitName>
 				<_putParamGain>0.1</_putParamGain>
 				<limit_h>1500</limit_h>
@@ -498,6 +525,7 @@
 				<PutLR>LEFT</PutLR>
 				<SpinStep>10</SpinStep>
 				<_isRawParam>false</_isRawParam>
+				<_isReverseOutputParam>false</_isReverseOutputParam>
 				<_paramUnitName>°</_paramUnitName>
 				<_putParamGain>0.1</_putParamGain>
 				<limit_h>50</limit_h>
@@ -521,6 +549,7 @@
 				<PutLR>LEFT</PutLR>
 				<SpinStep>10</SpinStep>
 				<_isRawParam>false</_isRawParam>
+				<_isReverseOutputParam>false</_isReverseOutputParam>
 				<_paramUnitName>°</_paramUnitName>
 				<_putParamGain>0.1</_putParamGain>
 				<limit_h>300</limit_h>
@@ -544,6 +573,7 @@
 				<PutLR>LEFT</PutLR>
 				<SpinStep>10</SpinStep>
 				<_isRawParam>false</_isRawParam>
+				<_isReverseOutputParam>false</_isReverseOutputParam>
 				<_paramUnitName i:nil="true" />
 				<_putParamGain>1</_putParamGain>
 				<limit_h>32767</limit_h>
@@ -567,6 +597,7 @@
 				<PutLR>LEFT</PutLR>
 				<SpinStep>10</SpinStep>
 				<_isRawParam>false</_isRawParam>
+				<_isReverseOutputParam>false</_isReverseOutputParam>
 				<_paramUnitName i:nil="true" />
 				<_putParamGain>1</_putParamGain>
 				<limit_h>32767</limit_h>
@@ -590,6 +621,7 @@
 				<PutLR>LEFT</PutLR>
 				<SpinStep>10</SpinStep>
 				<_isRawParam>false</_isRawParam>
+				<_isReverseOutputParam>false</_isReverseOutputParam>
 				<_paramUnitName i:nil="true" />
 				<_putParamGain>1</_putParamGain>
 				<limit_h>32767</limit_h>
@@ -613,6 +645,7 @@
 				<PutLR>LEFT</PutLR>
 				<SpinStep>10</SpinStep>
 				<_isRawParam>false</_isRawParam>
+				<_isReverseOutputParam>false</_isReverseOutputParam>
 				<_paramUnitName i:nil="true" />
 				<_putParamGain>1</_putParamGain>
 				<limit_h>32767</limit_h>
@@ -636,6 +669,7 @@
 				<PutLR>LEFT</PutLR>
 				<SpinStep>10</SpinStep>
 				<_isRawParam>false</_isRawParam>
+				<_isReverseOutputParam>false</_isReverseOutputParam>
 				<_paramUnitName i:nil="true" />
 				<_putParamGain>1</_putParamGain>
 				<limit_h>32767</limit_h>
@@ -659,6 +693,7 @@
 				<PutLR>LEFT</PutLR>
 				<SpinStep>10</SpinStep>
 				<_isRawParam>false</_isRawParam>
+				<_isReverseOutputParam>false</_isReverseOutputParam>
 				<_paramUnitName i:nil="true" />
 				<_putParamGain>1</_putParamGain>
 				<limit_h>32767</limit_h>
@@ -682,6 +717,7 @@
 				<PutLR>LEFT</PutLR>
 				<SpinStep>10</SpinStep>
 				<_isRawParam>false</_isRawParam>
+				<_isReverseOutputParam>false</_isReverseOutputParam>
 				<_paramUnitName i:nil="true" />
 				<_putParamGain>1</_putParamGain>
 				<limit_h>32767</limit_h>
@@ -705,6 +741,7 @@
 				<PutLR>LEFT</PutLR>
 				<SpinStep>10</SpinStep>
 				<_isRawParam>false</_isRawParam>
+				<_isReverseOutputParam>false</_isReverseOutputParam>
 				<_paramUnitName i:nil="true" />
 				<_putParamGain>1</_putParamGain>
 				<limit_h>32767</limit_h>
@@ -728,6 +765,7 @@
 				<PutLR>LEFT</PutLR>
 				<SpinStep>10</SpinStep>
 				<_isRawParam>false</_isRawParam>
+				<_isReverseOutputParam>false</_isReverseOutputParam>
 				<_paramUnitName i:nil="true" />
 				<_putParamGain>1</_putParamGain>
 				<limit_h>32767</limit_h>
@@ -751,6 +789,7 @@
 				<PutLR>LEFT</PutLR>
 				<SpinStep>10</SpinStep>
 				<_isRawParam>false</_isRawParam>
+				<_isReverseOutputParam>false</_isReverseOutputParam>
 				<_paramUnitName i:nil="true" />
 				<_putParamGain>1</_putParamGain>
 				<limit_h>32767</limit_h>
@@ -774,6 +813,7 @@
 				<PutLR>LEFT</PutLR>
 				<SpinStep>10</SpinStep>
 				<_isRawParam>false</_isRawParam>
+				<_isReverseOutputParam>false</_isReverseOutputParam>
 				<_paramUnitName i:nil="true" />
 				<_putParamGain>1</_putParamGain>
 				<limit_h>32767</limit_h>
@@ -797,6 +837,7 @@
 				<PutLR>LEFT</PutLR>
 				<SpinStep>10</SpinStep>
 				<_isRawParam>false</_isRawParam>
+				<_isReverseOutputParam>false</_isReverseOutputParam>
 				<_paramUnitName i:nil="true" />
 				<_putParamGain>1</_putParamGain>
 				<limit_h>32767</limit_h>
@@ -820,6 +861,7 @@
 				<PutLR>LEFT</PutLR>
 				<SpinStep>10</SpinStep>
 				<_isRawParam>false</_isRawParam>
+				<_isReverseOutputParam>false</_isReverseOutputParam>
 				<_paramUnitName i:nil="true" />
 				<_putParamGain>1</_putParamGain>
 				<limit_h>32767</limit_h>
@@ -843,6 +885,7 @@
 				<PutLR>LEFT</PutLR>
 				<SpinStep>10</SpinStep>
 				<_isRawParam>false</_isRawParam>
+				<_isReverseOutputParam>false</_isReverseOutputParam>
 				<_paramUnitName i:nil="true" />
 				<_putParamGain>1</_putParamGain>
 				<limit_h>32767</limit_h>
@@ -866,6 +909,7 @@
 				<PutLR>LEFT</PutLR>
 				<SpinStep>10</SpinStep>
 				<_isRawParam>false</_isRawParam>
+				<_isReverseOutputParam>false</_isReverseOutputParam>
 				<_paramUnitName i:nil="true" />
 				<_putParamGain>1</_putParamGain>
 				<limit_h>32767</limit_h>
@@ -889,6 +933,7 @@
 				<PutLR>LEFT</PutLR>
 				<SpinStep>10</SpinStep>
 				<_isRawParam>false</_isRawParam>
+				<_isReverseOutputParam>false</_isReverseOutputParam>
 				<_paramUnitName i:nil="true" />
 				<_putParamGain>1</_putParamGain>
 				<limit_h>32767</limit_h>
@@ -912,6 +957,7 @@
 				<PutLR>LEFT</PutLR>
 				<SpinStep>10</SpinStep>
 				<_isRawParam>false</_isRawParam>
+				<_isReverseOutputParam>false</_isReverseOutputParam>
 				<_paramUnitName i:nil="true" />
 				<_putParamGain>1</_putParamGain>
 				<limit_h>32767</limit_h>
@@ -935,6 +981,7 @@
 				<PutLR>LEFT</PutLR>
 				<SpinStep>10</SpinStep>
 				<_isRawParam>false</_isRawParam>
+				<_isReverseOutputParam>false</_isReverseOutputParam>
 				<_paramUnitName i:nil="true" />
 				<_putParamGain>1</_putParamGain>
 				<limit_h>32767</limit_h>
@@ -958,6 +1005,7 @@
 				<PutLR>LEFT</PutLR>
 				<SpinStep>10</SpinStep>
 				<_isRawParam>false</_isRawParam>
+				<_isReverseOutputParam>false</_isReverseOutputParam>
 				<_paramUnitName i:nil="true" />
 				<_putParamGain>1</_putParamGain>
 				<limit_h>32767</limit_h>
@@ -981,6 +1029,7 @@
 				<PutLR>LEFT</PutLR>
 				<SpinStep>10</SpinStep>
 				<_isRawParam>false</_isRawParam>
+				<_isReverseOutputParam>false</_isReverseOutputParam>
 				<_paramUnitName i:nil="true" />
 				<_putParamGain>1</_putParamGain>
 				<limit_h>32767</limit_h>
@@ -1004,6 +1053,7 @@
 				<PutLR>LEFT</PutLR>
 				<SpinStep>10</SpinStep>
 				<_isRawParam>false</_isRawParam>
+				<_isReverseOutputParam>false</_isReverseOutputParam>
 				<_paramUnitName i:nil="true" />
 				<_putParamGain>1</_putParamGain>
 				<limit_h>32767</limit_h>
@@ -1027,6 +1077,7 @@
 				<PutLR>LEFT</PutLR>
 				<SpinStep>10</SpinStep>
 				<_isRawParam>false</_isRawParam>
+				<_isReverseOutputParam>false</_isReverseOutputParam>
 				<_paramUnitName i:nil="true" />
 				<_putParamGain>1</_putParamGain>
 				<limit_h>32767</limit_h>
@@ -1050,6 +1101,7 @@
 				<PutLR>LEFT</PutLR>
 				<SpinStep>10</SpinStep>
 				<_isRawParam>false</_isRawParam>
+				<_isReverseOutputParam>false</_isReverseOutputParam>
 				<_paramUnitName i:nil="true" />
 				<_putParamGain>1</_putParamGain>
 				<limit_h>32767</limit_h>
@@ -1073,6 +1125,7 @@
 				<PutLR>LEFT</PutLR>
 				<SpinStep>10</SpinStep>
 				<_isRawParam>false</_isRawParam>
+				<_isReverseOutputParam>false</_isReverseOutputParam>
 				<_paramUnitName i:nil="true" />
 				<_putParamGain>1</_putParamGain>
 				<limit_h>100</limit_h>
@@ -1096,6 +1149,7 @@
 				<PutLR>LEFT</PutLR>
 				<SpinStep>10</SpinStep>
 				<_isRawParam>false</_isRawParam>
+				<_isReverseOutputParam>false</_isReverseOutputParam>
 				<_paramUnitName i:nil="true" />
 				<_putParamGain>1</_putParamGain>
 				<limit_h>100</limit_h>
@@ -1119,6 +1173,7 @@
 				<PutLR>LEFT</PutLR>
 				<SpinStep>10</SpinStep>
 				<_isRawParam>false</_isRawParam>
+				<_isReverseOutputParam>false</_isReverseOutputParam>
 				<_paramUnitName i:nil="true" />
 				<_putParamGain>1</_putParamGain>
 				<limit_h>100</limit_h>
@@ -1142,6 +1197,7 @@
 				<PutLR>LEFT</PutLR>
 				<SpinStep>10</SpinStep>
 				<_isRawParam>false</_isRawParam>
+				<_isReverseOutputParam>false</_isReverseOutputParam>
 				<_paramUnitName i:nil="true" />
 				<_putParamGain>1</_putParamGain>
 				<limit_h>100</limit_h>
@@ -1165,6 +1221,7 @@
 				<PutLR>LEFT</PutLR>
 				<SpinStep>10</SpinStep>
 				<_isRawParam>false</_isRawParam>
+				<_isReverseOutputParam>false</_isReverseOutputParam>
 				<_paramUnitName i:nil="true" />
 				<_putParamGain>1</_putParamGain>
 				<limit_h>100</limit_h>
@@ -1188,6 +1245,7 @@
 				<PutLR>LEFT</PutLR>
 				<SpinStep>10</SpinStep>
 				<_isRawParam>false</_isRawParam>
+				<_isReverseOutputParam>false</_isReverseOutputParam>
 				<_paramUnitName i:nil="true" />
 				<_putParamGain>1</_putParamGain>
 				<limit_h>100</limit_h>
@@ -1211,6 +1269,7 @@
 				<PutLR>LEFT</PutLR>
 				<SpinStep>10</SpinStep>
 				<_isRawParam>false</_isRawParam>
+				<_isReverseOutputParam>false</_isReverseOutputParam>
 				<_paramUnitName i:nil="true" />
 				<_putParamGain>1</_putParamGain>
 				<limit_h>100</limit_h>
@@ -1234,6 +1293,7 @@
 				<PutLR>LEFT</PutLR>
 				<SpinStep>10</SpinStep>
 				<_isRawParam>false</_isRawParam>
+				<_isReverseOutputParam>false</_isReverseOutputParam>
 				<_paramUnitName i:nil="true" />
 				<_putParamGain>1</_putParamGain>
 				<limit_h>100</limit_h>
@@ -1257,6 +1317,7 @@
 				<PutLR>LEFT</PutLR>
 				<SpinStep>10</SpinStep>
 				<_isRawParam>false</_isRawParam>
+				<_isReverseOutputParam>false</_isReverseOutputParam>
 				<_paramUnitName i:nil="true" />
 				<_putParamGain>1</_putParamGain>
 				<limit_h>100</limit_h>
@@ -1280,6 +1341,7 @@
 				<PutLR>LEFT</PutLR>
 				<SpinStep>10</SpinStep>
 				<_isRawParam>false</_isRawParam>
+				<_isReverseOutputParam>false</_isReverseOutputParam>
 				<_paramUnitName i:nil="true" />
 				<_putParamGain>1</_putParamGain>
 				<limit_h>100</limit_h>
@@ -1303,6 +1365,7 @@
 				<PutLR>LEFT</PutLR>
 				<SpinStep>10</SpinStep>
 				<_isRawParam>false</_isRawParam>
+				<_isReverseOutputParam>false</_isReverseOutputParam>
 				<_paramUnitName i:nil="true" />
 				<_putParamGain>1</_putParamGain>
 				<limit_h>100</limit_h>
@@ -1326,6 +1389,7 @@
 				<PutLR>LEFT</PutLR>
 				<SpinStep>10</SpinStep>
 				<_isRawParam>false</_isRawParam>
+				<_isReverseOutputParam>false</_isReverseOutputParam>
 				<_paramUnitName i:nil="true" />
 				<_putParamGain>1</_putParamGain>
 				<limit_h>100</limit_h>
@@ -1349,6 +1413,7 @@
 				<PutLR>LEFT</PutLR>
 				<SpinStep>10</SpinStep>
 				<_isRawParam>false</_isRawParam>
+				<_isReverseOutputParam>false</_isReverseOutputParam>
 				<_paramUnitName i:nil="true" />
 				<_putParamGain>1</_putParamGain>
 				<limit_h>100</limit_h>
@@ -1372,6 +1437,7 @@
 				<PutLR>LEFT</PutLR>
 				<SpinStep>10</SpinStep>
 				<_isRawParam>false</_isRawParam>
+				<_isReverseOutputParam>false</_isReverseOutputParam>
 				<_paramUnitName i:nil="true" />
 				<_putParamGain>1</_putParamGain>
 				<limit_h>100</limit_h>
@@ -1395,6 +1461,7 @@
 				<PutLR>LEFT</PutLR>
 				<SpinStep>10</SpinStep>
 				<_isRawParam>false</_isRawParam>
+				<_isReverseOutputParam>false</_isReverseOutputParam>
 				<_paramUnitName i:nil="true" />
 				<_putParamGain>1</_putParamGain>
 				<limit_h>100</limit_h>
@@ -1418,6 +1485,7 @@
 				<PutLR>LEFT</PutLR>
 				<SpinStep>10</SpinStep>
 				<_isRawParam>false</_isRawParam>
+				<_isReverseOutputParam>false</_isReverseOutputParam>
 				<_paramUnitName i:nil="true" />
 				<_putParamGain>1</_putParamGain>
 				<limit_h>100</limit_h>
@@ -1441,6 +1509,7 @@
 				<PutLR>LEFT</PutLR>
 				<SpinStep>10</SpinStep>
 				<_isRawParam>false</_isRawParam>
+				<_isReverseOutputParam>false</_isReverseOutputParam>
 				<_paramUnitName i:nil="true" />
 				<_putParamGain>1</_putParamGain>
 				<limit_h>100</limit_h>
@@ -1464,6 +1533,7 @@
 				<PutLR>LEFT</PutLR>
 				<SpinStep>10</SpinStep>
 				<_isRawParam>false</_isRawParam>
+				<_isReverseOutputParam>false</_isReverseOutputParam>
 				<_paramUnitName i:nil="true" />
 				<_putParamGain>1</_putParamGain>
 				<limit_h>100</limit_h>
@@ -1487,6 +1557,7 @@
 				<PutLR>LEFT</PutLR>
 				<SpinStep>10</SpinStep>
 				<_isRawParam>false</_isRawParam>
+				<_isReverseOutputParam>false</_isReverseOutputParam>
 				<_paramUnitName i:nil="true" />
 				<_putParamGain>1</_putParamGain>
 				<limit_h>100</limit_h>
@@ -1510,6 +1581,7 @@
 				<PutLR>LEFT</PutLR>
 				<SpinStep>10</SpinStep>
 				<_isRawParam>false</_isRawParam>
+				<_isReverseOutputParam>false</_isReverseOutputParam>
 				<_paramUnitName i:nil="true" />
 				<_putParamGain>1</_putParamGain>
 				<limit_h>100</limit_h>
@@ -1533,6 +1605,7 @@
 				<PutLR>LEFT</PutLR>
 				<SpinStep>10</SpinStep>
 				<_isRawParam>false</_isRawParam>
+				<_isReverseOutputParam>false</_isReverseOutputParam>
 				<_paramUnitName i:nil="true" />
 				<_putParamGain>1</_putParamGain>
 				<limit_h>100</limit_h>
@@ -1556,6 +1629,7 @@
 				<PutLR>LEFT</PutLR>
 				<SpinStep>10</SpinStep>
 				<_isRawParam>false</_isRawParam>
+				<_isReverseOutputParam>false</_isReverseOutputParam>
 				<_paramUnitName i:nil="true" />
 				<_putParamGain>1</_putParamGain>
 				<limit_h>100</limit_h>
@@ -1579,6 +1653,7 @@
 				<PutLR>LEFT</PutLR>
 				<SpinStep>10</SpinStep>
 				<_isRawParam>false</_isRawParam>
+				<_isReverseOutputParam>false</_isReverseOutputParam>
 				<_paramUnitName i:nil="true" />
 				<_putParamGain>1</_putParamGain>
 				<limit_h>100</limit_h>
@@ -1602,6 +1677,7 @@
 				<PutLR>LEFT</PutLR>
 				<SpinStep>10</SpinStep>
 				<_isRawParam>false</_isRawParam>
+				<_isReverseOutputParam>false</_isReverseOutputParam>
 				<_paramUnitName i:nil="true" />
 				<_putParamGain>1</_putParamGain>
 				<limit_h>100</limit_h>
@@ -1625,6 +1701,7 @@
 				<PutLR>LEFT</PutLR>
 				<SpinStep>10</SpinStep>
 				<_isRawParam>false</_isRawParam>
+				<_isReverseOutputParam>false</_isReverseOutputParam>
 				<_paramUnitName i:nil="true" />
 				<_putParamGain>1</_putParamGain>
 				<limit_h>100</limit_h>
@@ -1648,6 +1725,7 @@
 				<PutLR>LEFT</PutLR>
 				<SpinStep>10</SpinStep>
 				<_isRawParam>false</_isRawParam>
+				<_isReverseOutputParam>false</_isReverseOutputParam>
 				<_paramUnitName i:nil="true" />
 				<_putParamGain>1</_putParamGain>
 				<limit_h>100</limit_h>
@@ -1671,6 +1749,7 @@
 				<PutLR>LEFT</PutLR>
 				<SpinStep>10</SpinStep>
 				<_isRawParam>false</_isRawParam>
+				<_isReverseOutputParam>false</_isReverseOutputParam>
 				<_paramUnitName i:nil="true" />
 				<_putParamGain>1</_putParamGain>
 				<limit_h>100</limit_h>
@@ -1694,6 +1773,7 @@
 				<PutLR>LEFT</PutLR>
 				<SpinStep>10</SpinStep>
 				<_isRawParam>false</_isRawParam>
+				<_isReverseOutputParam>false</_isReverseOutputParam>
 				<_paramUnitName i:nil="true" />
 				<_putParamGain>1</_putParamGain>
 				<limit_h>100</limit_h>
@@ -1717,6 +1797,7 @@
 				<PutLR>LEFT</PutLR>
 				<SpinStep>10</SpinStep>
 				<_isRawParam>false</_isRawParam>
+				<_isReverseOutputParam>false</_isReverseOutputParam>
 				<_paramUnitName i:nil="true" />
 				<_putParamGain>1</_putParamGain>
 				<limit_h>100</limit_h>
@@ -1740,6 +1821,7 @@
 				<PutLR>LEFT</PutLR>
 				<SpinStep>10</SpinStep>
 				<_isRawParam>false</_isRawParam>
+				<_isReverseOutputParam>false</_isReverseOutputParam>
 				<_paramUnitName i:nil="true" />
 				<_putParamGain>1</_putParamGain>
 				<limit_h>100</limit_h>
@@ -1763,6 +1845,7 @@
 				<PutLR>LEFT</PutLR>
 				<SpinStep>10</SpinStep>
 				<_isRawParam>false</_isRawParam>
+				<_isReverseOutputParam>false</_isReverseOutputParam>
 				<_paramUnitName i:nil="true" />
 				<_putParamGain>1</_putParamGain>
 				<limit_h>100</limit_h>
@@ -1786,6 +1869,7 @@
 				<PutLR>LEFT</PutLR>
 				<SpinStep>10</SpinStep>
 				<_isRawParam>false</_isRawParam>
+				<_isReverseOutputParam>false</_isReverseOutputParam>
 				<_paramUnitName i:nil="true" />
 				<_putParamGain>1</_putParamGain>
 				<limit_h>100</limit_h>
@@ -1809,6 +1893,7 @@
 				<PutLR>LEFT</PutLR>
 				<SpinStep>5</SpinStep>
 				<_isRawParam>true</_isRawParam>
+				<_isReverseOutputParam>false</_isReverseOutputParam>
 				<_paramUnitName i:nil="true" />
 				<_putParamGain>1</_putParamGain>
 				<limit_h>255</limit_h>
@@ -1856,6 +1941,7 @@
 				<PutLR>LEFT</PutLR>
 				<SpinStep>5</SpinStep>
 				<_isRawParam>true</_isRawParam>
+				<_isReverseOutputParam>false</_isReverseOutputParam>
 				<_paramUnitName i:nil="true" />
 				<_putParamGain>1</_putParamGain>
 				<limit_h>255</limit_h>
@@ -1879,6 +1965,7 @@
 				<PutLR>LEFT</PutLR>
 				<SpinStep>5</SpinStep>
 				<_isRawParam>false</_isRawParam>
+				<_isReverseOutputParam>false</_isReverseOutputParam>
 				<_paramUnitName i:nil="true" />
 				<_putParamGain>1</_putParamGain>
 				<limit_h>255</limit_h>
@@ -1902,6 +1989,7 @@
 				<PutLR>LEFT</PutLR>
 				<SpinStep>5</SpinStep>
 				<_isRawParam>false</_isRawParam>
+				<_isReverseOutputParam>false</_isReverseOutputParam>
 				<_paramUnitName i:nil="true" />
 				<_putParamGain>1</_putParamGain>
 				<limit_h>255</limit_h>
@@ -1925,6 +2013,7 @@
 				<PutLR>LEFT</PutLR>
 				<SpinStep>5</SpinStep>
 				<_isRawParam>false</_isRawParam>
+				<_isReverseOutputParam>false</_isReverseOutputParam>
 				<_paramUnitName i:nil="true" />
 				<_putParamGain>1</_putParamGain>
 				<limit_h>255</limit_h>
@@ -1948,6 +2037,7 @@
 				<PutLR>LEFT</PutLR>
 				<SpinStep>5</SpinStep>
 				<_isRawParam>false</_isRawParam>
+				<_isReverseOutputParam>false</_isReverseOutputParam>
 				<_paramUnitName i:nil="true" />
 				<_putParamGain>1</_putParamGain>
 				<limit_h>255</limit_h>
@@ -1971,6 +2061,7 @@
 				<PutLR>LEFT</PutLR>
 				<SpinStep>5</SpinStep>
 				<_isRawParam>false</_isRawParam>
+				<_isReverseOutputParam>false</_isReverseOutputParam>
 				<_paramUnitName i:nil="true" />
 				<_putParamGain>1</_putParamGain>
 				<limit_h>255</limit_h>
@@ -1994,6 +2085,7 @@
 				<PutLR>LEFT</PutLR>
 				<SpinStep>5</SpinStep>
 				<_isRawParam>true</_isRawParam>
+				<_isReverseOutputParam>false</_isReverseOutputParam>
 				<_paramUnitName i:nil="true" />
 				<_putParamGain>1</_putParamGain>
 				<limit_h>255</limit_h>
@@ -2017,6 +2109,7 @@
 				<PutLR>LEFT</PutLR>
 				<SpinStep>5</SpinStep>
 				<_isRawParam>true</_isRawParam>
+				<_isReverseOutputParam>false</_isReverseOutputParam>
 				<_paramUnitName i:nil="true" />
 				<_putParamGain>1</_putParamGain>
 				<limit_h>255</limit_h>
@@ -2040,6 +2133,7 @@
 				<PutLR>LEFT</PutLR>
 				<SpinStep>5</SpinStep>
 				<_isRawParam>true</_isRawParam>
+				<_isReverseOutputParam>false</_isReverseOutputParam>
 				<_paramUnitName i:nil="true" />
 				<_putParamGain>1</_putParamGain>
 				<limit_h>255</limit_h>
@@ -2063,6 +2157,7 @@
 				<PutLR>LEFT</PutLR>
 				<SpinStep>5</SpinStep>
 				<_isRawParam>true</_isRawParam>
+				<_isReverseOutputParam>false</_isReverseOutputParam>
 				<_paramUnitName i:nil="true" />
 				<_putParamGain>1</_putParamGain>
 				<limit_h>255</limit_h>
@@ -2086,6 +2181,7 @@
 				<PutLR>LEFT</PutLR>
 				<SpinStep>5</SpinStep>
 				<_isRawParam>true</_isRawParam>
+				<_isReverseOutputParam>false</_isReverseOutputParam>
 				<_paramUnitName i:nil="true" />
 				<_putParamGain>1</_putParamGain>
 				<limit_h>255</limit_h>
@@ -2109,6 +2205,7 @@
 				<PutLR>LEFT</PutLR>
 				<SpinStep>5</SpinStep>
 				<_isRawParam>true</_isRawParam>
+				<_isReverseOutputParam>false</_isReverseOutputParam>
 				<_paramUnitName i:nil="true" />
 				<_putParamGain>1</_putParamGain>
 				<limit_h>255</limit_h>
@@ -2132,6 +2229,7 @@
 				<PutLR>LEFT</PutLR>
 				<SpinStep>5</SpinStep>
 				<_isRawParam>false</_isRawParam>
+				<_isReverseOutputParam>false</_isReverseOutputParam>
 				<_paramUnitName i:nil="true" />
 				<_putParamGain>1</_putParamGain>
 				<limit_h>255</limit_h>
@@ -2155,6 +2253,7 @@
 				<PutLR>LEFT</PutLR>
 				<SpinStep>5</SpinStep>
 				<_isRawParam>false</_isRawParam>
+				<_isReverseOutputParam>false</_isReverseOutputParam>
 				<_paramUnitName i:nil="true" />
 				<_putParamGain>1</_putParamGain>
 				<limit_h>255</limit_h>
@@ -2178,6 +2277,7 @@
 				<PutLR>LEFT</PutLR>
 				<SpinStep>10</SpinStep>
 				<_isRawParam>false</_isRawParam>
+				<_isReverseOutputParam>false</_isReverseOutputParam>
 				<_paramUnitName i:nil="true" />
 				<_putParamGain>1</_putParamGain>
 				<limit_h>32767</limit_h>
@@ -2201,6 +2301,7 @@
 				<PutLR>LEFT</PutLR>
 				<SpinStep>10</SpinStep>
 				<_isRawParam>false</_isRawParam>
+				<_isReverseOutputParam>false</_isReverseOutputParam>
 				<_paramUnitName i:nil="true" />
 				<_putParamGain>1</_putParamGain>
 				<limit_h>32767</limit_h>
@@ -2224,6 +2325,7 @@
 				<PutLR>LEFT</PutLR>
 				<SpinStep>10</SpinStep>
 				<_isRawParam>false</_isRawParam>
+				<_isReverseOutputParam>false</_isReverseOutputParam>
 				<_paramUnitName i:nil="true" />
 				<_putParamGain>1</_putParamGain>
 				<limit_h>32767</limit_h>
@@ -2247,6 +2349,7 @@
 				<PutLR>LEFT</PutLR>
 				<SpinStep>10</SpinStep>
 				<_isRawParam>false</_isRawParam>
+				<_isReverseOutputParam>false</_isReverseOutputParam>
 				<_paramUnitName i:nil="true" />
 				<_putParamGain>1</_putParamGain>
 				<limit_h>32767</limit_h>
@@ -2270,6 +2373,7 @@
 				<PutLR>LEFT</PutLR>
 				<SpinStep>10</SpinStep>
 				<_isRawParam>false</_isRawParam>
+				<_isReverseOutputParam>false</_isReverseOutputParam>
 				<_paramUnitName i:nil="true" />
 				<_putParamGain>1</_putParamGain>
 				<limit_h>32767</limit_h>
@@ -2293,6 +2397,7 @@
 				<PutLR>LEFT</PutLR>
 				<SpinStep>10</SpinStep>
 				<_isRawParam>false</_isRawParam>
+				<_isReverseOutputParam>false</_isReverseOutputParam>
 				<_paramUnitName i:nil="true" />
 				<_putParamGain>1</_putParamGain>
 				<limit_h>32767</limit_h>
@@ -2316,6 +2421,7 @@
 				<PutLR>LEFT</PutLR>
 				<SpinStep>10</SpinStep>
 				<_isRawParam>false</_isRawParam>
+				<_isReverseOutputParam>false</_isReverseOutputParam>
 				<_paramUnitName i:nil="true" />
 				<_putParamGain>1</_putParamGain>
 				<limit_h>32767</limit_h>
@@ -2339,6 +2445,7 @@
 				<PutLR>LEFT</PutLR>
 				<SpinStep>10</SpinStep>
 				<_isRawParam>false</_isRawParam>
+				<_isReverseOutputParam>false</_isReverseOutputParam>
 				<_paramUnitName i:nil="true" />
 				<_putParamGain>1</_putParamGain>
 				<limit_h>32767</limit_h>
@@ -2362,6 +2469,7 @@
 				<PutLR>LEFT</PutLR>
 				<SpinStep>10</SpinStep>
 				<_isRawParam>false</_isRawParam>
+				<_isReverseOutputParam>false</_isReverseOutputParam>
 				<_paramUnitName i:nil="true" />
 				<_putParamGain>1</_putParamGain>
 				<limit_h>32767</limit_h>
@@ -2385,6 +2493,7 @@
 				<PutLR>LEFT</PutLR>
 				<SpinStep>10</SpinStep>
 				<_isRawParam>false</_isRawParam>
+				<_isReverseOutputParam>false</_isReverseOutputParam>
 				<_paramUnitName i:nil="true" />
 				<_putParamGain>1</_putParamGain>
 				<limit_h>32767</limit_h>
@@ -2408,6 +2517,7 @@
 				<PutLR>LEFT</PutLR>
 				<SpinStep>10</SpinStep>
 				<_isRawParam>false</_isRawParam>
+				<_isReverseOutputParam>false</_isReverseOutputParam>
 				<_paramUnitName i:nil="true" />
 				<_putParamGain>1</_putParamGain>
 				<limit_h>32767</limit_h>
@@ -2431,6 +2541,7 @@
 				<PutLR>LEFT</PutLR>
 				<SpinStep>10</SpinStep>
 				<_isRawParam>false</_isRawParam>
+				<_isReverseOutputParam>false</_isReverseOutputParam>
 				<_paramUnitName i:nil="true" />
 				<_putParamGain>1</_putParamGain>
 				<limit_h>32767</limit_h>
@@ -2454,6 +2565,7 @@
 				<PutLR>LEFT</PutLR>
 				<SpinStep>10</SpinStep>
 				<_isRawParam>false</_isRawParam>
+				<_isReverseOutputParam>false</_isReverseOutputParam>
 				<_paramUnitName i:nil="true" />
 				<_putParamGain>1</_putParamGain>
 				<limit_h>32767</limit_h>
@@ -2477,6 +2589,7 @@
 				<PutLR>LEFT</PutLR>
 				<SpinStep>10</SpinStep>
 				<_isRawParam>false</_isRawParam>
+				<_isReverseOutputParam>false</_isReverseOutputParam>
 				<_paramUnitName i:nil="true" />
 				<_putParamGain>1</_putParamGain>
 				<limit_h>32767</limit_h>
@@ -2500,6 +2613,7 @@
 				<PutLR>LEFT</PutLR>
 				<SpinStep>10</SpinStep>
 				<_isRawParam>false</_isRawParam>
+				<_isReverseOutputParam>false</_isReverseOutputParam>
 				<_paramUnitName i:nil="true" />
 				<_putParamGain>1</_putParamGain>
 				<limit_h>32767</limit_h>
@@ -2523,6 +2637,7 @@
 				<PutLR>LEFT</PutLR>
 				<SpinStep>10</SpinStep>
 				<_isRawParam>false</_isRawParam>
+				<_isReverseOutputParam>false</_isReverseOutputParam>
 				<_paramUnitName i:nil="true" />
 				<_putParamGain>1</_putParamGain>
 				<limit_h>32767</limit_h>
@@ -2546,6 +2661,7 @@
 				<PutLR>LEFT</PutLR>
 				<SpinStep>10</SpinStep>
 				<_isRawParam>false</_isRawParam>
+				<_isReverseOutputParam>false</_isReverseOutputParam>
 				<_paramUnitName i:nil="true" />
 				<_putParamGain>1</_putParamGain>
 				<limit_h>32767</limit_h>
@@ -2569,6 +2685,7 @@
 				<PutLR>LEFT</PutLR>
 				<SpinStep>10</SpinStep>
 				<_isRawParam>false</_isRawParam>
+				<_isReverseOutputParam>false</_isReverseOutputParam>
 				<_paramUnitName i:nil="true" />
 				<_putParamGain>1</_putParamGain>
 				<limit_h>32767</limit_h>
@@ -2592,6 +2709,7 @@
 				<PutLR>LEFT</PutLR>
 				<SpinStep>10</SpinStep>
 				<_isRawParam>false</_isRawParam>
+				<_isReverseOutputParam>false</_isReverseOutputParam>
 				<_paramUnitName i:nil="true" />
 				<_putParamGain>1</_putParamGain>
 				<limit_h>32767</limit_h>
@@ -2615,6 +2733,7 @@
 				<PutLR>LEFT</PutLR>
 				<SpinStep>10</SpinStep>
 				<_isRawParam>false</_isRawParam>
+				<_isReverseOutputParam>false</_isReverseOutputParam>
 				<_paramUnitName i:nil="true" />
 				<_putParamGain>1</_putParamGain>
 				<limit_h>32767</limit_h>
@@ -2638,6 +2757,7 @@
 				<PutLR>LEFT</PutLR>
 				<SpinStep>10</SpinStep>
 				<_isRawParam>false</_isRawParam>
+				<_isReverseOutputParam>false</_isReverseOutputParam>
 				<_paramUnitName i:nil="true" />
 				<_putParamGain>1</_putParamGain>
 				<limit_h>32767</limit_h>
@@ -2661,6 +2781,7 @@
 				<PutLR>LEFT</PutLR>
 				<SpinStep>10</SpinStep>
 				<_isRawParam>false</_isRawParam>
+				<_isReverseOutputParam>false</_isReverseOutputParam>
 				<_paramUnitName i:nil="true" />
 				<_putParamGain>1</_putParamGain>
 				<limit_h>32767</limit_h>
@@ -2684,6 +2805,7 @@
 				<PutLR>LEFT</PutLR>
 				<SpinStep>10</SpinStep>
 				<_isRawParam>false</_isRawParam>
+				<_isReverseOutputParam>false</_isReverseOutputParam>
 				<_paramUnitName i:nil="true" />
 				<_putParamGain>1</_putParamGain>
 				<limit_h>32767</limit_h>
@@ -2707,6 +2829,7 @@
 				<PutLR>LEFT</PutLR>
 				<SpinStep>10</SpinStep>
 				<_isRawParam>false</_isRawParam>
+				<_isReverseOutputParam>false</_isReverseOutputParam>
 				<_paramUnitName i:nil="true" />
 				<_putParamGain>1</_putParamGain>
 				<limit_h>32767</limit_h>
@@ -2730,6 +2853,7 @@
 				<PutLR>LEFT</PutLR>
 				<SpinStep>10</SpinStep>
 				<_isRawParam>false</_isRawParam>
+				<_isReverseOutputParam>false</_isReverseOutputParam>
 				<_paramUnitName i:nil="true" />
 				<_putParamGain>1</_putParamGain>
 				<limit_h>32767</limit_h>
@@ -2753,6 +2877,7 @@
 				<PutLR>LEFT</PutLR>
 				<SpinStep>10</SpinStep>
 				<_isRawParam>false</_isRawParam>
+				<_isReverseOutputParam>false</_isReverseOutputParam>
 				<_paramUnitName i:nil="true" />
 				<_putParamGain>1</_putParamGain>
 				<limit_h>32767</limit_h>
@@ -2776,6 +2901,7 @@
 				<PutLR>LEFT</PutLR>
 				<SpinStep>10</SpinStep>
 				<_isRawParam>false</_isRawParam>
+				<_isReverseOutputParam>false</_isReverseOutputParam>
 				<_paramUnitName i:nil="true" />
 				<_putParamGain>1</_putParamGain>
 				<limit_h>32767</limit_h>
@@ -2799,6 +2925,7 @@
 				<PutLR>LEFT</PutLR>
 				<SpinStep>10</SpinStep>
 				<_isRawParam>false</_isRawParam>
+				<_isReverseOutputParam>false</_isReverseOutputParam>
 				<_paramUnitName i:nil="true" />
 				<_putParamGain>1</_putParamGain>
 				<limit_h>32767</limit_h>
@@ -2822,6 +2949,7 @@
 				<PutLR>LEFT</PutLR>
 				<SpinStep>10</SpinStep>
 				<_isRawParam>false</_isRawParam>
+				<_isReverseOutputParam>false</_isReverseOutputParam>
 				<_paramUnitName i:nil="true" />
 				<_putParamGain>1</_putParamGain>
 				<limit_h>32767</limit_h>
@@ -2845,6 +2973,7 @@
 				<PutLR>LEFT</PutLR>
 				<SpinStep>10</SpinStep>
 				<_isRawParam>false</_isRawParam>
+				<_isReverseOutputParam>false</_isReverseOutputParam>
 				<_paramUnitName i:nil="true" />
 				<_putParamGain>1</_putParamGain>
 				<limit_h>32767</limit_h>
@@ -2868,6 +2997,7 @@
 				<PutLR>LEFT</PutLR>
 				<SpinStep>10</SpinStep>
 				<_isRawParam>false</_isRawParam>
+				<_isReverseOutputParam>false</_isReverseOutputParam>
 				<_paramUnitName i:nil="true" />
 				<_putParamGain>1</_putParamGain>
 				<limit_h>32767</limit_h>
@@ -2891,6 +3021,7 @@
 				<PutLR>LEFT</PutLR>
 				<SpinStep>10</SpinStep>
 				<_isRawParam>false</_isRawParam>
+				<_isReverseOutputParam>false</_isReverseOutputParam>
 				<_paramUnitName i:nil="true" />
 				<_putParamGain>1</_putParamGain>
 				<limit_h>32767</limit_h>
@@ -2914,6 +3045,7 @@
 				<PutLR>LEFT</PutLR>
 				<SpinStep>10</SpinStep>
 				<_isRawParam>false</_isRawParam>
+				<_isReverseOutputParam>false</_isReverseOutputParam>
 				<_paramUnitName i:nil="true" />
 				<_putParamGain>1</_putParamGain>
 				<limit_h>32767</limit_h>
@@ -2937,6 +3069,7 @@
 				<PutLR>LEFT</PutLR>
 				<SpinStep>10</SpinStep>
 				<_isRawParam>false</_isRawParam>
+				<_isReverseOutputParam>false</_isReverseOutputParam>
 				<_paramUnitName i:nil="true" />
 				<_putParamGain>1</_putParamGain>
 				<limit_h>32767</limit_h>
@@ -2960,6 +3093,7 @@
 				<PutLR>LEFT</PutLR>
 				<SpinStep>10</SpinStep>
 				<_isRawParam>false</_isRawParam>
+				<_isReverseOutputParam>false</_isReverseOutputParam>
 				<_paramUnitName i:nil="true" />
 				<_putParamGain>1</_putParamGain>
 				<limit_h>32767</limit_h>
@@ -2983,6 +3117,7 @@
 				<PutLR>LEFT</PutLR>
 				<SpinStep>10</SpinStep>
 				<_isRawParam>false</_isRawParam>
+				<_isReverseOutputParam>false</_isReverseOutputParam>
 				<_paramUnitName i:nil="true" />
 				<_putParamGain>1</_putParamGain>
 				<limit_h>32767</limit_h>
@@ -3006,6 +3141,7 @@
 				<PutLR>LEFT</PutLR>
 				<SpinStep>10</SpinStep>
 				<_isRawParam>false</_isRawParam>
+				<_isReverseOutputParam>false</_isReverseOutputParam>
 				<_paramUnitName i:nil="true" />
 				<_putParamGain>1</_putParamGain>
 				<limit_h>32767</limit_h>
@@ -3029,6 +3165,7 @@
 				<PutLR>LEFT</PutLR>
 				<SpinStep>10</SpinStep>
 				<_isRawParam>false</_isRawParam>
+				<_isReverseOutputParam>false</_isReverseOutputParam>
 				<_paramUnitName i:nil="true" />
 				<_putParamGain>1</_putParamGain>
 				<limit_h>32767</limit_h>
@@ -3052,6 +3189,7 @@
 				<PutLR>LEFT</PutLR>
 				<SpinStep>10</SpinStep>
 				<_isRawParam>false</_isRawParam>
+				<_isReverseOutputParam>false</_isReverseOutputParam>
 				<_paramUnitName i:nil="true" />
 				<_putParamGain>1</_putParamGain>
 				<limit_h>32767</limit_h>
@@ -3075,6 +3213,7 @@
 				<PutLR>LEFT</PutLR>
 				<SpinStep>10</SpinStep>
 				<_isRawParam>false</_isRawParam>
+				<_isReverseOutputParam>false</_isReverseOutputParam>
 				<_paramUnitName i:nil="true" />
 				<_putParamGain>1</_putParamGain>
 				<limit_h>32767</limit_h>
@@ -3098,6 +3237,7 @@
 				<PutLR>LEFT</PutLR>
 				<SpinStep>10</SpinStep>
 				<_isRawParam>false</_isRawParam>
+				<_isReverseOutputParam>false</_isReverseOutputParam>
 				<_paramUnitName i:nil="true" />
 				<_putParamGain>1</_putParamGain>
 				<limit_h>32767</limit_h>
@@ -3121,6 +3261,7 @@
 				<PutLR>LEFT</PutLR>
 				<SpinStep>10</SpinStep>
 				<_isRawParam>false</_isRawParam>
+				<_isReverseOutputParam>false</_isReverseOutputParam>
 				<_paramUnitName i:nil="true" />
 				<_putParamGain>1</_putParamGain>
 				<limit_h>32767</limit_h>
@@ -3144,6 +3285,7 @@
 				<PutLR>LEFT</PutLR>
 				<SpinStep>10</SpinStep>
 				<_isRawParam>false</_isRawParam>
+				<_isReverseOutputParam>false</_isReverseOutputParam>
 				<_paramUnitName i:nil="true" />
 				<_putParamGain>1</_putParamGain>
 				<limit_h>32767</limit_h>
@@ -3167,6 +3309,7 @@
 				<PutLR>LEFT</PutLR>
 				<SpinStep>10</SpinStep>
 				<_isRawParam>false</_isRawParam>
+				<_isReverseOutputParam>false</_isReverseOutputParam>
 				<_paramUnitName i:nil="true" />
 				<_putParamGain>1</_putParamGain>
 				<limit_h>32767</limit_h>
@@ -3190,6 +3333,7 @@
 				<PutLR>LEFT</PutLR>
 				<SpinStep>10</SpinStep>
 				<_isRawParam>false</_isRawParam>
+				<_isReverseOutputParam>false</_isReverseOutputParam>
 				<_paramUnitName i:nil="true" />
 				<_putParamGain>1</_putParamGain>
 				<limit_h>32767</limit_h>
@@ -3213,6 +3357,7 @@
 				<PutLR>LEFT</PutLR>
 				<SpinStep>10</SpinStep>
 				<_isRawParam>false</_isRawParam>
+				<_isReverseOutputParam>false</_isReverseOutputParam>
 				<_paramUnitName i:nil="true" />
 				<_putParamGain>1</_putParamGain>
 				<limit_h>32767</limit_h>
@@ -3236,6 +3381,7 @@
 				<PutLR>LEFT</PutLR>
 				<SpinStep>10</SpinStep>
 				<_isRawParam>false</_isRawParam>
+				<_isReverseOutputParam>false</_isReverseOutputParam>
 				<_paramUnitName i:nil="true" />
 				<_putParamGain>1</_putParamGain>
 				<limit_h>32767</limit_h>
@@ -3259,6 +3405,7 @@
 				<PutLR>LEFT</PutLR>
 				<SpinStep>10</SpinStep>
 				<_isRawParam>false</_isRawParam>
+				<_isReverseOutputParam>false</_isReverseOutputParam>
 				<_paramUnitName i:nil="true" />
 				<_putParamGain>1</_putParamGain>
 				<limit_h>32767</limit_h>
