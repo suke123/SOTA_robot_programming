@@ -18,7 +18,7 @@ public class Show_Time_test01 {
 	   	Date date = new Date();     //現時刻の取得
 	   	SimpleDateFormat sdf1 = new SimpleDateFormat("yyyy_MM_dd_HH_mm_ss");
 	   	SimpleDateFormat sdf2 = new SimpleDateFormat("yyyy/MM/dd HH:mm:ss");
-	   	System.out.println(sdf1.format(date));
+	   	System.out.println(date);
         String path_in = "images/kame_2592_1944.png";             //画像を取得
         String path_out = "images/"+sdf1.format(date)+".png";     //画像を出力時の時刻の名前で保存
 
