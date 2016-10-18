@@ -145,9 +145,48 @@ public class time_show
 		date_string = CRobotUtil.getDateString();																		//@<BlockInfo>jp.vstone.block.freeproc,112,672,112,672,False,25,@</BlockInfo>
 		time_string = CRobotUtil.getTimeString();
 
+		String date0 = date_string;
+		String time0 = time_string;
 
-		String filepath = "/var/sota/photo/";
-		filepath += (String)"picture02";
+		//System.out.println()
+
+
+		String regex1 = "年";
+		String regex2 = "月";
+		String regex3 = "日";
+		String regex4 = "時";
+		String regex5 = "分";
+		String regex6 = "秒";
+		String regex7 = "曜";
+
+		String date1 = date_string.replaceAll(regex1, "/");
+		String date2 = date1.replaceAll(regex2, "/");
+		String date3 = date2.replaceAll(regex3, "");
+		String date = date3.replaceAll(regex7, "");
+		String time1 = time_string.replaceAll(regex4, ":");
+		String time2 = time1.replaceAll(regex5, ":");
+		String time = time2.replaceAll(regex6, "");
+
+		String DateTime = date+time;
+		String dt = DateTime.replaceAll("　", "");
+
+
+		String date_f1 = date_string.replaceAll(regex1, "_");
+		String date_f2 = date_f1.replaceAll(regex2, "_");
+		String date_f3 = date_f2.replaceAll(regex3, "");
+		String date_f = date_f3.replaceAll(regex7, "");
+		String time_f1 = time_string.replaceAll(regex4, "_");
+		String time_f2 = time_f1.replaceAll(regex5, "_");
+		String time_f = time_f2.replaceAll(regex6, "");
+
+		String DateTime2 = date_f+time_f;
+		String dt2 = DateTime2.replaceAll("　", "");
+
+		System.out.println(dt);
+		System.out.println(dt2);
+
+		/*String filepath = "/var/sota/photo/";
+		filepath += (String)"picture03";
 		boolean isTrakcing=GlobalVariable.robocam.isAliveFaceDetectTask();
 		if(isTrakcing) GlobalVariable.robocam.StopFaceTraking();
 		GlobalVariable.robocam.initStill(new CameraCapture(CameraCapture.CAP_IMAGE_SIZE_5Mpixel, CameraCapture.CAP_FORMAT_MJPG));
@@ -156,15 +195,15 @@ public class time_show
 		CRobotUtil.Log("stillpicture","save picthre file to \"" + filepath +"\"");
 		if(isTrakcing) GlobalVariable.robocam.StartFaceTraking();
 
-		String path_in = "/var/sota/photo/picture02.jpg";
-		String path_out = "/var/sota/photo/after_picture02.jpg";
+		String path_in = "/var/sota/photo/picture03.jpg";
+		String path_out = "/var/sota/photo/after_picture03.jpg";
 
 		Mat mat_src = new Mat();
 
 		mat_src = Imgcodecs.imread(path_in);
-		Imgproc.putText(mat_src, date_string+" "+time_string, new Point(2000, 1900), Core.FONT_HERSHEY_SIMPLEX, 1.6f, new Scalar(0, 0, 0), 3);
+		Imgproc.putText(mat_src, date+" "+time, new Point(1900, 1900), Core.FONT_HERSHEY_SIMPLEX, 2.4f, new Scalar(0, 0, 0), 4);
 
-		Imgcodecs.imwrite(path_out, mat_src);
+		Imgcodecs.imwrite(path_out, mat_src);*/
 																														//@<EndOfBlock/>
 																														//@</OutputChild>
 
