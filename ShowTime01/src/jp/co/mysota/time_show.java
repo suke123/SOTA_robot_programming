@@ -148,8 +148,6 @@ public class time_show
 		String date0 = date_string;
 		String time0 = time_string;
 
-		//System.out.println()
-
 
 		String regex1 = "年";
 		String regex2 = "月";
@@ -204,6 +202,85 @@ public class time_show
 		Imgproc.putText(mat_src, date+" "+time, new Point(1900, 1900), Core.FONT_HERSHEY_SIMPLEX, 2.4f, new Scalar(0, 0, 0), 4);
 
 		Imgcodecs.imwrite(path_out, mat_src);*/
+																														//@<EndOfBlock/>
+																														//@</OutputChild>
+
+	}																													//@<EndOfBlock/>
+
+	//@<Separate/>
+	public void photo_time()																							//@<BlockInfo>jp.vstone.block.func,0,784,288,784,False,28,@</BlockInfo>
+	throws SpeechRecogAbortException {
+		if(!GlobalVariable.TRUE) throw new SpeechRecogAbortException("default");
+
+																														//@<OutputChild>
+		date_string = CRobotUtil.getDateString();																		//@<BlockInfo>jp.vstone.block.freeproc,112,784,112,784,False,27,@</BlockInfo>
+		time_string = CRobotUtil.getTimeString();
+
+		String date = date_string;
+		String time = time_string;
+
+		String date1 = date_string;
+		String time1 = time_string;
+
+		String[] regex = {"年","月","時　","分　","日","秒","曜","月","火","水","木","金","土"};
+
+		for(int i = 0; i < 13; i++){
+			if(i <= 1){
+				date = date.replaceAll(regex[i], "/");
+			}
+			else if(i <= 3){
+				time = time.replaceAll(regex[i], ":");
+			}
+			else{
+				date = date.replaceAll(regex[i], "");
+				time = time.replaceAll(regex[i], "");		
+			}
+			
+		}
+		System.out.println(date);
+		System.out.println(time);
+
+		for(int j = 0; j < 13; j++){
+			if(j <= 1){
+				date1 = date1.replaceAll(regex[j], "_");
+			}
+			else if(j <= 3){
+				time1 = time1.replaceAll(regex[j], "_");
+			}
+			else{
+				date1 = date1.replaceAll(regex[j], "");
+				time1 = time1.replaceAll(regex[j], "");
+			}
+		}
+		System.out.println(date1);
+		System.out.println(time1);
+
+		String dt = date+" "+time;
+
+		String dt2 = date1+"_"+time1;
+
+		//System.out.println(dt);
+		//System.out.println(dt2);
+
+		String filepath = "/var/sota/photo/";
+		filepath += dt2;
+		boolean isTrakcing=GlobalVariable.robocam.isAliveFaceDetectTask();
+		if(isTrakcing) GlobalVariable.robocam.StopFaceTraking();
+		GlobalVariable.robocam.initStill(new CameraCapture(CameraCapture.CAP_IMAGE_SIZE_5Mpixel, CameraCapture.CAP_FORMAT_MJPG));
+		GlobalVariable.robocam.StillPicture(filepath);
+
+		CRobotUtil.Log("stillpicture","save picthre file to \"" + filepath +"\"");
+		if(isTrakcing) GlobalVariable.robocam.StartFaceTraking();
+
+		String path_in = "/var/sota/photo/"+dt2+".jpg";
+		String path_out = "/var/sota/photo/after_"+dt2+".jpg";
+
+		Mat mat_src = new Mat();
+
+		mat_src = Imgcodecs.imread(path_in);
+		Imgproc.putText(mat_src, dt, new Point(1650, 1900), Core.FONT_HERSHEY_SIMPLEX, 2.4f, new Scalar(0, 0, 0), 4);
+
+		Imgcodecs.imwrite(path_out, mat_src);
 																														//@<EndOfBlock/>
 																														//@</OutputChild>
 

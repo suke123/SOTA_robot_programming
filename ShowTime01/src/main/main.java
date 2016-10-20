@@ -45,7 +45,7 @@ public class main
 			jp.co.mysota.time_show time_show = new jp.co.mysota.time_show();
 			try
 			{
-				time_show.method();
+				time_show.photo_time();
 			} catch(Exception e)
 			{
 				System.out.println("例外が発生しました:");
