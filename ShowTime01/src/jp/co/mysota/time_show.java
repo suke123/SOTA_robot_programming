@@ -208,12 +208,12 @@ public class time_show
 	}																													//@<EndOfBlock/>
 
 	//@<Separate/>
-	public void photo_time()																							//@<BlockInfo>jp.vstone.block.func,0,784,288,784,False,28,@</BlockInfo>
+	public void photo_time()																							//@<BlockInfo>jp.vstone.block.func,0,784,160,784,False,28,@</BlockInfo>
 	throws SpeechRecogAbortException {
 		if(!GlobalVariable.TRUE) throw new SpeechRecogAbortException("default");
 
 																														//@<OutputChild>
-		date_string = CRobotUtil.getDateString();																		//@<BlockInfo>jp.vstone.block.freeproc,112,784,112,784,False,27,@</BlockInfo>
+		date_string = CRobotUtil.getDateString();																		//@<BlockInfo>jp.vstone.block.freeproc,80,784,80,784,False,27,@</BlockInfo>
 		time_string = CRobotUtil.getTimeString();
 
 		String date = date_string;
@@ -278,7 +278,7 @@ public class time_show
 		Mat mat_src = new Mat();
 
 		mat_src = Imgcodecs.imread(path_in);
-		Imgproc.putText(mat_src, dt, new Point(1650, 1900), Core.FONT_HERSHEY_SIMPLEX, 2.4f, new Scalar(0, 0, 0), 4);
+		Imgproc.putText(mat_src, dt, new Point(1650, 1900), Core.FONT_HERSHEY_SIMPLEX, 2.4f, new Scalar(255, 0, 0), 4);
 
 		Imgcodecs.imwrite(path_out, mat_src);
 																														//@<EndOfBlock/>

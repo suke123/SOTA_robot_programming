@@ -3487,7 +3487,7 @@
 			<debugPort>8765</debugPort>
 			<host>192.168.1.49</host>
 			<password>edison00</password>
-			<platform>Edison</platform>
+			<platform>Unknown</platform>
 			<rootPath>/home/root/</rootPath>
 			<sshPort>22</sshPort>
 			<username>root</username>
