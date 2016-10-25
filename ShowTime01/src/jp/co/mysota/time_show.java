@@ -233,9 +233,9 @@ public class time_show
 			}
 			else{
 				date = date.replaceAll(regex[i], "");
-				time = time.replaceAll(regex[i], "");		
+				time = time.replaceAll(regex[i], "");
 			}
-			
+
 		}
 		System.out.println(date);
 		System.out.println(time);
@@ -259,8 +259,8 @@ public class time_show
 
 		String dt2 = date1+"_"+time1;
 
-		//System.out.println(dt);
-		//System.out.println(dt2);
+
+
 
 		String filepath = "/var/sota/photo/";
 		filepath += dt2;
@@ -281,6 +281,29 @@ public class time_show
 		Imgproc.putText(mat_src, dt, new Point(1650, 1900), Core.FONT_HERSHEY_SIMPLEX, 2.4f, new Scalar(255, 0, 0), 4);
 
 		Imgcodecs.imwrite(path_out, mat_src);
+																														//@<EndOfBlock/>
+																														//@</OutputChild>
+
+	}																													//@<EndOfBlock/>
+
+	//@<Separate/>
+	public void method1()																								//@<BlockInfo>jp.vstone.block.func,0,992,208,992,False,30,@</BlockInfo>
+	throws SpeechRecogAbortException {
+		if(!GlobalVariable.TRUE) throw new SpeechRecogAbortException("default");
+
+																														//@<OutputChild>
+		date_string = CRobotUtil.getDateString();																		//@<BlockInfo>jp.vstone.block.freeproc,96,992,96,992,False,29,@</BlockInfo>
+		time_string = CRobotUtil.getTimeString();
+
+		String filepath = "/var/sota/photo/";
+		filepath += (String)"picture";
+		boolean isTrakcing=GlobalVariable.robocam.isAliveFaceDetectTask();
+		if(isTrakcing) GlobalVariable.robocam.StopFaceTraking();
+		GlobalVariable.robocam.initStill(new CameraCapture(CameraCapture.CAP_IMAGE_SIZE_5Mpixel, CameraCapture.CAP_FORMAT_MJPG));
+		GlobalVariable.robocam.StillPicture(filepath);
+
+		CRobotUtil.Log("stillpicture","save picthre file to \"" + filepath +"\"");
+		if(isTrakcing) GlobalVariable.robocam.StartFaceTraking();
 																														//@<EndOfBlock/>
 																														//@</OutputChild>
 
