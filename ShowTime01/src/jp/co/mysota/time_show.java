@@ -21,51 +21,57 @@ public class time_show
 	public String date_string;
 	public int getDateTimeElement;
 	public LocalDateTime localDateTime;
-	public time_show()																									//@<BlockInfo>jp.vstone.block.func.constructor,16,16,336,16,False,5,@</BlockInfo>
+	public int faceDetectResultAge;
+	public String speechRecogResult;
+	public time_show()																									//@<BlockInfo>jp.vstone.block.func.constructor,16,16,464,16,False,7,@</BlockInfo>
 	{
 																														//@<OutputChild>
-		/*String time_string*/;																							//@<BlockInfo>jp.vstone.block.variable,80,16,80,16,False,4,break@</BlockInfo>
+		/*String time_string*/;																							//@<BlockInfo>jp.vstone.block.variable,80,16,80,16,False,6,break@</BlockInfo>
 																														//@<EndOfBlock/>
-		/*String date_string*/;																							//@<BlockInfo>jp.vstone.block.variable,144,16,144,16,False,3,break@</BlockInfo>
+		/*String date_string*/;																							//@<BlockInfo>jp.vstone.block.variable,144,16,144,16,False,5,break@</BlockInfo>
 																														//@<EndOfBlock/>
-		/*int getDateTimeElement*/;																						//@<BlockInfo>jp.vstone.block.variable,208,16,208,16,False,2,break@</BlockInfo>
+		/*int getDateTimeElement*/;																						//@<BlockInfo>jp.vstone.block.variable,208,16,208,16,False,4,break@</BlockInfo>
 																														//@<EndOfBlock/>
-		/*LocalDateTime localDateTime*/;																				//@<BlockInfo>jp.vstone.block.variable,272,16,272,16,False,1,break@</BlockInfo>
+		/*LocalDateTime localDateTime*/;																				//@<BlockInfo>jp.vstone.block.variable,272,16,272,16,False,3,break@</BlockInfo>
+																														//@<EndOfBlock/>
+		/*int faceDetectResultAge*/;																					//@<BlockInfo>jp.vstone.block.variable,336,16,336,16,False,2,break@</BlockInfo>
+																														//@<EndOfBlock/>
+		/*String speechRecogResult*/;																					//@<BlockInfo>jp.vstone.block.variable,400,16,400,16,False,1,break@</BlockInfo>
 																														//@<EndOfBlock/>
 																														//@</OutputChild>
 	}																													//@<EndOfBlock/>
 
 	//@<Separate/>
-	public void main()																									//@<BlockInfo>jp.vstone.block.func,0,256,1008,256,False,16,コメント@</BlockInfo>
+	public void main()																									//@<BlockInfo>jp.vstone.block.func,0,256,1008,256,False,18,コメント@</BlockInfo>
 	throws SpeechRecogAbortException {
 		if(!GlobalVariable.TRUE) throw new SpeechRecogAbortException("default");
 
 																														//@<OutputChild>
-		{																												//@<BlockInfo>jp.vstone.block.time.getdatetimeelement,64,256,64,256,False,15,dateTimeに記録された日時情報から、年・月・日・時・分・秒のうち一つをtypeで指定し、変数int getDateTimeElementに代入する@</BlockInfo>
+		{																												//@<BlockInfo>jp.vstone.block.time.getdatetimeelement,64,256,64,256,False,17,dateTimeに記録された日時情報から、年・月・日・時・分・秒のうち一つをtypeで指定し、変数int getDateTimeElementに代入する@</BlockInfo>
 			LocalDateTime d = (LocalDateTime)localDateTime;
 			getDateTimeElement = d.getHour();
 		}																												//@<EndOfBlock/>
-		if(getDateTimeElement<=11)																						//@<BlockInfo>jp.vstone.block.if,128,160,448,160,False,14,コメント@</BlockInfo>
+		if(getDateTimeElement<=11)																						//@<BlockInfo>jp.vstone.block.if,128,160,448,160,False,16,コメント@</BlockInfo>
 		{
 																														//@<OutputChild>
-			GlobalVariable.sotawish.Say((String)"おはよう",MotionAsSotaWish.MOTION_TYPE_TALK,(int)11,(int)13,(int)11);		//@<BlockInfo>jp.vstone.block.talk.say,256,160,256,160,False,6,@</BlockInfo>
+			GlobalVariable.sotawish.Say((String)"おはよう",MotionAsSotaWish.MOTION_TYPE_TALK,(int)11,(int)13,(int)11);		//@<BlockInfo>jp.vstone.block.talk.say,256,160,256,160,False,8,@</BlockInfo>
 																														//@<EndOfBlock/>
 																														//@</OutputChild>
 		}
 		else if(getDateTimeElement<=16)
 		{
 																														//@<OutputChild>
-			if(getDateTimeElement>11)																					//@<BlockInfo>jp.vstone.block.if,192,208,384,208,False,9,コメント@</BlockInfo>
+			if(getDateTimeElement>11)																					//@<BlockInfo>jp.vstone.block.if,192,208,384,208,False,11,コメント@</BlockInfo>
 			{
 																														//@<OutputChild>
-				GlobalVariable.sotawish.Say((String)"こんにちは",MotionAsSotaWish.MOTION_TYPE_TALK,(int)11,(int)13,(int)11);	//@<BlockInfo>jp.vstone.block.talk.say,320,208,320,208,False,7,@</BlockInfo>
+				GlobalVariable.sotawish.Say((String)"こんにちは",MotionAsSotaWish.MOTION_TYPE_TALK,(int)11,(int)13,(int)11);	//@<BlockInfo>jp.vstone.block.talk.say,320,208,320,208,False,9,@</BlockInfo>
 																														//@<EndOfBlock/>
 																														//@</OutputChild>
 			}
 			else
 			{
 																														//@<OutputChild>
-				GlobalVariable.sotawish.Say((String)"こんばんは",MotionAsSotaWish.MOTION_TYPE_TALK,(int)11,(int)13,(int)11);	//@<BlockInfo>jp.vstone.block.talk.say,256,304,256,304,False,8,@</BlockInfo>
+				GlobalVariable.sotawish.Say((String)"こんばんは",MotionAsSotaWish.MOTION_TYPE_TALK,(int)11,(int)13,(int)11);	//@<BlockInfo>jp.vstone.block.talk.say,256,304,256,304,False,10,@</BlockInfo>
 																														//@<EndOfBlock/>
 																														//@</OutputChild>
 			}
@@ -75,33 +81,33 @@ public class time_show
 		else
 		{
 																														//@<OutputChild>
-			GlobalVariable.sotawish.Say((String)"こんばんは",MotionAsSotaWish.MOTION_TYPE_TALK,(int)11,(int)13,(int)11);		//@<BlockInfo>jp.vstone.block.talk.say,320,368,320,368,False,10,@</BlockInfo>
+			GlobalVariable.sotawish.Say((String)"こんばんは",MotionAsSotaWish.MOTION_TYPE_TALK,(int)11,(int)13,(int)11);		//@<BlockInfo>jp.vstone.block.talk.say,320,368,320,368,False,12,@</BlockInfo>
 																														//@<EndOfBlock/>
 																														//@</OutputChild>
 		}
 																														//@<EndOfBlock/>
-		GlobalVariable.sotawish.Say((String)"突然だけど、写真撮るね。5、4、3、2、1、",MotionAsSotaWish.MOTION_TYPE_TALK,(int)11,(int)13,(int)11);	//@<BlockInfo>jp.vstone.block.talk.say,512,256,512,256,False,13,@</BlockInfo>
+		GlobalVariable.sotawish.Say((String)"突然だけど、写真撮るね。5、4、3、2、1、",MotionAsSotaWish.MOTION_TYPE_TALK,(int)11,(int)13,(int)11);	//@<BlockInfo>jp.vstone.block.talk.say,512,256,512,256,False,15,@</BlockInfo>
 																														//@<EndOfBlock/>
-		take_picture();																									//@<BlockInfo>jp.vstone.block.callfunc.base,576,256,576,256,False,12,@</BlockInfo>	@<EndOfBlock/>
-		GlobalVariable.sotawish.Say((String)"撮影終わったよ。ありがとう。",MotionAsSotaWish.MOTION_TYPE_TALK,(int)11,(int)13,(int)11);	//@<BlockInfo>jp.vstone.block.talk.say,944,256,944,256,False,11,@</BlockInfo>
+		take_picture();																									//@<BlockInfo>jp.vstone.block.callfunc.base,576,256,576,256,False,14,@</BlockInfo>	@<EndOfBlock/>
+		GlobalVariable.sotawish.Say((String)"撮影終わったよ。ありがとう。",MotionAsSotaWish.MOTION_TYPE_TALK,(int)11,(int)13,(int)11);	//@<BlockInfo>jp.vstone.block.talk.say,944,256,944,256,False,13,@</BlockInfo>
 																														//@<EndOfBlock/>
 																														//@</OutputChild>
 
 	}																													//@<EndOfBlock/>
 
 	//@<Separate/>
-	public void take_picture()																							//@<BlockInfo>jp.vstone.block.func,0,528,304,528,False,21,@</BlockInfo>
+	public void take_picture()																							//@<BlockInfo>jp.vstone.block.func,0,528,304,528,False,23,@</BlockInfo>
 	throws SpeechRecogAbortException {
 		if(!GlobalVariable.TRUE) throw new SpeechRecogAbortException("default");
 
 																														//@<OutputChild>
-		localDateTime = LocalDateTime.now();																			//@<BlockInfo>jp.vstone.block.time.getlocaldatetime,64,464,64,464,False,20,ローカル時間をロボット内のカレンダーより取得し、変数LocalDateTime lodalDateTimeに代入。取得した情報から日時などを個別に切り出す場合は「日時の切り出しブロック」を使う@</BlockInfo>
+		localDateTime = LocalDateTime.now();																			//@<BlockInfo>jp.vstone.block.time.getlocaldatetime,64,464,64,464,False,22,ローカル時間をロボット内のカレンダーより取得し、変数LocalDateTime lodalDateTimeに代入。取得した情報から日時などを個別に切り出す場合は「日時の切り出しブロック」を使う@</BlockInfo>
 																														//@<EndOfBlock/>
-		date_string = CRobotUtil.getDateString();																		//@<BlockInfo>jp.vstone.block.time.getdate,96,560,96,560,False,19,ロボット内のカレンダーより現在年月日を文字列で取得し、変数String date_stringに代入。@</BlockInfo>
+		date_string = CRobotUtil.getDateString();																		//@<BlockInfo>jp.vstone.block.time.getdate,96,560,96,560,False,21,ロボット内のカレンダーより現在年月日を文字列で取得し、変数String date_stringに代入。@</BlockInfo>
 																														//@<EndOfBlock/>
-		time_string = CRobotUtil.getTimeString();																		//@<BlockInfo>jp.vstone.block.time.gettime,160,560,160,560,False,18,ロボット内のカレンダーより現在時刻を文字列で取得し、変数String time_stringに代入。@</BlockInfo>
+		time_string = CRobotUtil.getTimeString();																		//@<BlockInfo>jp.vstone.block.time.gettime,160,560,160,560,False,20,ロボット内のカレンダーより現在時刻を文字列で取得し、変数String time_stringに代入。@</BlockInfo>
 																														//@<EndOfBlock/>
-		{																												//@<BlockInfo>jp.vstone.block.facedetect.stillpicture,224,560,224,560,False,17,still@</BlockInfo>
+		{																												//@<BlockInfo>jp.vstone.block.facedetect.stillpicture,224,560,224,560,False,19,still@</BlockInfo>
 			String filepath = "/var/sota/photo/";
 			filepath += (String)"picture";
 			boolean isTrakcing=GlobalVariable.robocam.isAliveFaceDetectTask();
@@ -118,11 +124,11 @@ public class time_show
 
 	//@<Separate/>
 	/*
-	date_string = CRobotUtil.getDateString();																			//@<BlockInfo>jp.vstone.block.time.getdate,816,48,816,48,False,24,ロボット内のカレンダーより現在年月日を文字列で取得し、変数String date_stringに代入。@</BlockInfo>
+	date_string = CRobotUtil.getDateString();																			//@<BlockInfo>jp.vstone.block.time.getdate,816,48,816,48,False,26,ロボット内のカレンダーより現在年月日を文字列で取得し、変数String date_stringに代入。@</BlockInfo>
 																														//@<EndOfBlock/>
-	time_string = CRobotUtil.getTimeString();																			//@<BlockInfo>jp.vstone.block.time.gettime,880,48,880,48,False,23,ロボット内のカレンダーより現在時刻を文字列で取得し、変数String time_stringに代入。@</BlockInfo>
+	time_string = CRobotUtil.getTimeString();																			//@<BlockInfo>jp.vstone.block.time.gettime,880,48,880,48,False,25,ロボット内のカレンダーより現在時刻を文字列で取得し、変数String time_stringに代入。@</BlockInfo>
 																														//@<EndOfBlock/>
-	{																													//@<BlockInfo>jp.vstone.block.facedetect.stillpicture,944,48,944,48,False,22,still@</BlockInfo>
+	{																													//@<BlockInfo>jp.vstone.block.facedetect.stillpicture,944,48,944,48,False,24,still@</BlockInfo>
 		String filepath = "/var/sota/photo/";
 		filepath += (String)"picture";
 		boolean isTrakcing=GlobalVariable.robocam.isAliveFaceDetectTask();
@@ -137,12 +143,12 @@ public class time_show
 	*/
 
 	//@<Separate/>
-	public void method()																								//@<BlockInfo>jp.vstone.block.func,0,672,272,672,False,26,@</BlockInfo>
+	public void method()																								//@<BlockInfo>jp.vstone.block.func,0,672,272,672,False,28,@</BlockInfo>
 	throws SpeechRecogAbortException {
 		if(!GlobalVariable.TRUE) throw new SpeechRecogAbortException("default");
 
 																														//@<OutputChild>
-		date_string = CRobotUtil.getDateString();																		//@<BlockInfo>jp.vstone.block.freeproc,112,672,112,672,False,25,@</BlockInfo>
+		date_string = CRobotUtil.getDateString();																		//@<BlockInfo>jp.vstone.block.freeproc,112,672,112,672,False,27,@</BlockInfo>
 		time_string = CRobotUtil.getTimeString();
 
 		String date0 = date_string;
@@ -208,35 +214,12 @@ public class time_show
 	}																													//@<EndOfBlock/>
 
 	//@<Separate/>
-	public void method1()																								//@<BlockInfo>jp.vstone.block.func,0,992,208,992,False,28,@</BlockInfo>
+	public void photo_time()																							//@<BlockInfo>jp.vstone.block.func,0,784,160,784,False,30,@</BlockInfo>
 	throws SpeechRecogAbortException {
 		if(!GlobalVariable.TRUE) throw new SpeechRecogAbortException("default");
 
 																														//@<OutputChild>
-		date_string = CRobotUtil.getDateString();																		//@<BlockInfo>jp.vstone.block.freeproc,96,992,96,992,False,27,@</BlockInfo>
-		time_string = CRobotUtil.getTimeString();
-
-		String filepath = "/var/sota/photo/";
-		filepath += (String)"picture";
-		boolean isTrakcing=GlobalVariable.robocam.isAliveFaceDetectTask();
-		if(isTrakcing) GlobalVariable.robocam.StopFaceTraking();
-		GlobalVariable.robocam.initStill(new CameraCapture(CameraCapture.CAP_IMAGE_SIZE_5Mpixel, CameraCapture.CAP_FORMAT_MJPG));
-		GlobalVariable.robocam.StillPicture(filepath);
-
-		CRobotUtil.Log("stillpicture","save picthre file to \"" + filepath +"\"");
-		if(isTrakcing) GlobalVariable.robocam.StartFaceTraking();
-																														//@<EndOfBlock/>
-																														//@</OutputChild>
-
-	}																													//@<EndOfBlock/>
-
-	//@<Separate/>
-	public void photo_time()																							//@<BlockInfo>jp.vstone.block.func,0,784,160,784,False,29,@</BlockInfo>
-	throws SpeechRecogAbortException {
-		if(!GlobalVariable.TRUE) throw new SpeechRecogAbortException("default");
-
-																														//@<OutputChild>
-		date_string = CRobotUtil.getDateString();																		//@<BlockInfo>jp.vstone.block.freeproc,80,784,80,784,False,30,@</BlockInfo>
+		date_string = CRobotUtil.getDateString();																		//@<BlockInfo>jp.vstone.block.freeproc,80,784,80,784,False,29,@</BlockInfo>
 		time_string = CRobotUtil.getTimeString();
 
 		String date = date_string;
@@ -283,15 +266,15 @@ public class time_show
 		String dt2 = date1+"_"+time1;
 
 
-		GlobalVariable.sotawish.Say((String)"写真撮るよ",MotionAsSotaWish.MOTION_TYPE_TALK,(int)11,(int)13,(int)11);
-		GlobalVariable.sotawish.Say((String)"3　",MotionAsSotaWish.MOTION_TYPE_TALK,(int)11,(int)13,(int)11);
-		GlobalVariable.sotawish.Say((String)"2　",MotionAsSotaWish.MOTION_TYPE_TALK,(int)11,(int)13,(int)11);
-		GlobalVariable.sotawish.Say((String)"1　",MotionAsSotaWish.MOTION_TYPE_TALK,(int)11,(int)13,(int)11);
-
-
 		String filepath = "/var/sota/photo/";
 		filepath += dt2;
 		boolean isTrakcing=GlobalVariable.robocam.isAliveFaceDetectTask();
+
+		GlobalVariable.sotawish.Say((String)"写真撮るよ",MotionAsSotaWish.MOTION_TYPE_TALK,(int)11,(int)13,(int)11);
+		GlobalVariable.sotawish.Say((String)"３",MotionAsSotaWish.MOTION_TYPE_TALK,(int)11,(int)13,(int)11);
+		GlobalVariable.sotawish.Say((String)"２",MotionAsSotaWish.MOTION_TYPE_TALK,(int)11,(int)13,(int)11);
+		GlobalVariable.sotawish.Say((String)"１",MotionAsSotaWish.MOTION_TYPE_TALK,(int)11,(int)13,(int)11);
+
 		if(isTrakcing) GlobalVariable.robocam.StopFaceTraking();
 		GlobalVariable.robocam.initStill(new CameraCapture(CameraCapture.CAP_IMAGE_SIZE_5Mpixel, CameraCapture.CAP_FORMAT_MJPG));
 		GlobalVariable.robocam.StillPicture(filepath);
@@ -308,6 +291,101 @@ public class time_show
 		Imgproc.putText(mat_src, dt, new Point(1650, 1900), Core.FONT_HERSHEY_SIMPLEX, 2.4f, new Scalar(0, 0, 255), 4);
 
 		Imgcodecs.imwrite(path_out, mat_src);
+																														//@<EndOfBlock/>
+																														//@</OutputChild>
+
+	}																													//@<EndOfBlock/>
+
+	//@<Separate/>
+	public void method1()																								//@<BlockInfo>jp.vstone.block.func,0,992,832,992,False,36,@</BlockInfo>
+	throws SpeechRecogAbortException {
+		if(!GlobalVariable.TRUE) throw new SpeechRecogAbortException("default");
+
+																														//@<OutputChild>
+		date_string = CRobotUtil.getDateString();																		//@<BlockInfo>jp.vstone.block.freeproc,96,992,96,992,False,35,@</BlockInfo>
+		time_string = CRobotUtil.getTimeString();
+
+		String filepath = "/var/sota/photo/";
+		filepath += (String)"picture";
+		boolean isTrakcing=GlobalVariable.robocam.isAliveFaceDetectTask();
+		if(isTrakcing) GlobalVariable.robocam.StopFaceTraking();
+		GlobalVariable.robocam.initStill(new CameraCapture(CameraCapture.CAP_IMAGE_SIZE_5Mpixel, CameraCapture.CAP_FORMAT_MJPG));
+		GlobalVariable.robocam.StillPicture(filepath);
+
+		CRobotUtil.Log("stillpicture","save picthre file to \"" + filepath +"\"");
+		if(isTrakcing) GlobalVariable.robocam.StartFaceTraking();
+																														//@<EndOfBlock/>
+		GlobalVariable.robocam.setEnableFaceSearch(true);																//@<BlockInfo>jp.vstone.block.facedetect.detect,160,992,1184,992,False,34,顔検出@</BlockInfo>
+		GlobalVariable.robocam.setEnableSmileDetect(true);
+		GlobalVariable.robocam.setEnableAgeSexDetect(true);
+
+		GlobalVariable.robocam.StartFaceDetect();
+		try{
+			GlobalVariable.detectCount=0;
+
+																														//@<OutputChild>
+			GlobalVariable.faceresult = GlobalVariable.robocam.getDetectResult();										//@<BlockInfo>jp.vstone.block.facedetect.isdetect,224,944,912,992,False,33,コメント@</BlockInfo>
+
+			if(GlobalVariable.faceresult.isDetect()) GlobalVariable.detectCount++;
+			else GlobalVariable.detectCount=0;
+
+			if(GlobalVariable.detectCount>(int)3)
+			{
+																														//@<OutputChild>
+				{																										//@<BlockInfo>jp.vstone.block.facedetect.gender2,288,848,640,848,False,32,@</BlockInfo>
+					boolean isMale=false,isFemale=false;
+					GlobalVariable.faceresult = GlobalVariable.robocam.getDetectResult();
+					if(GlobalVariable.faceresult.isMale()!=null) isMale = GlobalVariable.faceresult.isMale();
+					if(GlobalVariable.faceresult.isFemale()!=null) isFemale = GlobalVariable.faceresult.isFemale();
+
+					if( isMale )
+					{
+																														//@<OutputChild>
+					speechRecogResult = GlobalVariable.recog.getNamewithAbort((int)60000 , (int)3);						//@<BlockInfo>jp.vstone.block.talk.getname,352,800,576,800,False,37,音声認識を行い、名前を取得する。取得結果はメンバー変数のspeechRecogResultに格納される。@</BlockInfo>
+
+					if(speechRecogResult != null)
+					{
+																														//@<OutputChild>
+																														//@</OutputChild>
+
+					}else
+					{
+																														//@<OutputChild>
+																														//@</OutputChild>
+
+					}
+																														//@<EndOfBlock/>
+					GlobalVariable.faceresult = GlobalVariable.robocam.getDetectResult();								//@<BlockInfo>jp.vstone.block.facedetect.age.get2,448,848,448,848,False,31,現在認識している顔の年齢がfaceDetectResultAgeに格納される。顔が認識されない場合、faceDetectResultAgeに-1が代入される。@</BlockInfo>
+					faceDetectResultAge = GlobalVariable.faceresult.getAge();											//@<EndOfBlock/>
+																														//@</OutputChild>
+
+					}else if( isFemale )
+					{
+																														//@<OutputChild>
+																														//@</OutputChild>
+
+					}else
+					{
+																														//@<OutputChild>
+																														//@</OutputChild>
+
+					}
+				}
+																														//@<EndOfBlock/>
+																														//@</OutputChild>
+
+			}else
+			{
+																														//@<OutputChild>
+																														//@</OutputChild>
+
+			}
+																														//@<EndOfBlock/>
+																														//@</OutputChild>
+
+		}finally{
+			GlobalVariable.robocam.StopFaceDetect();
+		}
 																														//@<EndOfBlock/>
 																														//@</OutputChild>
 
