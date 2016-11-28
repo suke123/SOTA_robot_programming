@@ -214,12 +214,107 @@ public class time_show
 	}																													//@<EndOfBlock/>
 
 	//@<Separate/>
-	public void photo_time()																							//@<BlockInfo>jp.vstone.block.func,0,784,160,784,False,30,@</BlockInfo>
+	public void method1()																								//@<BlockInfo>jp.vstone.block.func,0,1168,832,1168,False,35,@</BlockInfo>
 	throws SpeechRecogAbortException {
 		if(!GlobalVariable.TRUE) throw new SpeechRecogAbortException("default");
 
 																														//@<OutputChild>
-		date_string = CRobotUtil.getDateString();																		//@<BlockInfo>jp.vstone.block.freeproc,80,784,80,784,False,29,@</BlockInfo>
+		date_string = CRobotUtil.getDateString();																		//@<BlockInfo>jp.vstone.block.freeproc,96,1168,96,1168,False,34,@</BlockInfo>
+		time_string = CRobotUtil.getTimeString();
+
+		String filepath = "/var/sota/photo/";
+		filepath += (String)"picture";
+		boolean isTrakcing=GlobalVariable.robocam.isAliveFaceDetectTask();
+		if(isTrakcing) GlobalVariable.robocam.StopFaceTraking();
+		GlobalVariable.robocam.initStill(new CameraCapture(CameraCapture.CAP_IMAGE_SIZE_5Mpixel, CameraCapture.CAP_FORMAT_MJPG));
+		GlobalVariable.robocam.StillPicture(filepath);
+
+		CRobotUtil.Log("stillpicture","save picthre file to \"" + filepath +"\"");
+		if(isTrakcing) GlobalVariable.robocam.StartFaceTraking();
+																														//@<EndOfBlock/>
+		GlobalVariable.robocam.setEnableFaceSearch(true);																//@<BlockInfo>jp.vstone.block.facedetect.detect,160,1168,1184,1120,False,33,顔検出@</BlockInfo>
+		GlobalVariable.robocam.setEnableSmileDetect(true);
+		GlobalVariable.robocam.setEnableAgeSexDetect(true);
+
+		GlobalVariable.robocam.StartFaceDetect();
+		try{
+			GlobalVariable.detectCount=0;
+
+																														//@<OutputChild>
+			GlobalVariable.faceresult = GlobalVariable.robocam.getDetectResult();										//@<BlockInfo>jp.vstone.block.facedetect.isdetect,224,1120,912,1168,False,32,コメント@</BlockInfo>
+
+			if(GlobalVariable.faceresult.isDetect()) GlobalVariable.detectCount++;
+			else GlobalVariable.detectCount=0;
+
+			if(GlobalVariable.detectCount>(int)3)
+			{
+																														//@<OutputChild>
+				{																										//@<BlockInfo>jp.vstone.block.facedetect.gender2,288,1024,640,1024,False,31,@</BlockInfo>
+					boolean isMale=false,isFemale=false;
+					GlobalVariable.faceresult = GlobalVariable.robocam.getDetectResult();
+					if(GlobalVariable.faceresult.isMale()!=null) isMale = GlobalVariable.faceresult.isMale();
+					if(GlobalVariable.faceresult.isFemale()!=null) isFemale = GlobalVariable.faceresult.isFemale();
+
+					if( isMale )
+					{
+																														//@<OutputChild>
+					speechRecogResult = GlobalVariable.recog.getNamewithAbort((int)60000 , (int)3);						//@<BlockInfo>jp.vstone.block.talk.getname,352,976,576,976,False,30,音声認識を行い、名前を取得する。取得結果はメンバー変数のspeechRecogResultに格納される。@</BlockInfo>
+
+					if(speechRecogResult != null)
+					{
+																														//@<OutputChild>
+																														//@</OutputChild>
+
+					}else
+					{
+																														//@<OutputChild>
+																														//@</OutputChild>
+
+					}
+																														//@<EndOfBlock/>
+					GlobalVariable.faceresult = GlobalVariable.robocam.getDetectResult();								//@<BlockInfo>jp.vstone.block.facedetect.age.get2,448,976,448,976,False,29,現在認識している顔の年齢がfaceDetectResultAgeに格納される。顔が認識されない場合、faceDetectResultAgeに-1が代入される。@</BlockInfo>
+					faceDetectResultAge = GlobalVariable.faceresult.getAge();											//@<EndOfBlock/>
+																														//@</OutputChild>
+
+					}else if( isFemale )
+					{
+																														//@<OutputChild>
+																														//@</OutputChild>
+
+					}else
+					{
+																														//@<OutputChild>
+																														//@</OutputChild>
+
+					}
+				}
+																														//@<EndOfBlock/>
+																														//@</OutputChild>
+
+			}else
+			{
+																														//@<OutputChild>
+																														//@</OutputChild>
+
+			}
+																														//@<EndOfBlock/>
+																														//@</OutputChild>
+
+		}finally{
+			GlobalVariable.robocam.StopFaceDetect();
+		}
+																														//@<EndOfBlock/>
+																														//@</OutputChild>
+
+	}																													//@<EndOfBlock/>
+
+	//@<Separate/>
+	public void photo_time()																							//@<BlockInfo>jp.vstone.block.func,16,816,176,816,False,36,@</BlockInfo>
+	throws SpeechRecogAbortException {
+		if(!GlobalVariable.TRUE) throw new SpeechRecogAbortException("default");
+
+																														//@<OutputChild>
+		date_string = CRobotUtil.getDateString();																		//@<BlockInfo>jp.vstone.block.freeproc,96,816,96,816,False,37,@</BlockInfo>
 		time_string = CRobotUtil.getTimeString();
 
 		String date = date_string;
@@ -271,9 +366,7 @@ public class time_show
 		boolean isTrakcing=GlobalVariable.robocam.isAliveFaceDetectTask();
 
 		GlobalVariable.sotawish.Say((String)"写真撮るよ",MotionAsSotaWish.MOTION_TYPE_TALK,(int)11,(int)13,(int)11);
-		GlobalVariable.sotawish.Say((String)"３",MotionAsSotaWish.MOTION_TYPE_TALK,(int)11,(int)13,(int)11);
-		GlobalVariable.sotawish.Say((String)"２",MotionAsSotaWish.MOTION_TYPE_TALK,(int)11,(int)13,(int)11);
-		GlobalVariable.sotawish.Say((String)"１",MotionAsSotaWish.MOTION_TYPE_TALK,(int)11,(int)13,(int)11);
+		GlobalVariable.sotawish.Say((String)"３、２、１",MotionAsSotaWish.MOTION_TYPE_TALK,(int)3,(int)13,(int)11);
 
 		if(isTrakcing) GlobalVariable.robocam.StopFaceTraking();
 		GlobalVariable.robocam.initStill(new CameraCapture(CameraCapture.CAP_IMAGE_SIZE_5Mpixel, CameraCapture.CAP_FORMAT_MJPG));
@@ -291,101 +384,6 @@ public class time_show
 		Imgproc.putText(mat_src, dt, new Point(1650, 1900), Core.FONT_HERSHEY_SIMPLEX, 2.4f, new Scalar(0, 0, 255), 4);
 
 		Imgcodecs.imwrite(path_out, mat_src);
-																														//@<EndOfBlock/>
-																														//@</OutputChild>
-
-	}																													//@<EndOfBlock/>
-
-	//@<Separate/>
-	public void method1()																								//@<BlockInfo>jp.vstone.block.func,0,992,832,992,False,36,@</BlockInfo>
-	throws SpeechRecogAbortException {
-		if(!GlobalVariable.TRUE) throw new SpeechRecogAbortException("default");
-
-																														//@<OutputChild>
-		date_string = CRobotUtil.getDateString();																		//@<BlockInfo>jp.vstone.block.freeproc,96,992,96,992,False,35,@</BlockInfo>
-		time_string = CRobotUtil.getTimeString();
-
-		String filepath = "/var/sota/photo/";
-		filepath += (String)"picture";
-		boolean isTrakcing=GlobalVariable.robocam.isAliveFaceDetectTask();
-		if(isTrakcing) GlobalVariable.robocam.StopFaceTraking();
-		GlobalVariable.robocam.initStill(new CameraCapture(CameraCapture.CAP_IMAGE_SIZE_5Mpixel, CameraCapture.CAP_FORMAT_MJPG));
-		GlobalVariable.robocam.StillPicture(filepath);
-
-		CRobotUtil.Log("stillpicture","save picthre file to \"" + filepath +"\"");
-		if(isTrakcing) GlobalVariable.robocam.StartFaceTraking();
-																														//@<EndOfBlock/>
-		GlobalVariable.robocam.setEnableFaceSearch(true);																//@<BlockInfo>jp.vstone.block.facedetect.detect,160,992,1184,992,False,34,顔検出@</BlockInfo>
-		GlobalVariable.robocam.setEnableSmileDetect(true);
-		GlobalVariable.robocam.setEnableAgeSexDetect(true);
-
-		GlobalVariable.robocam.StartFaceDetect();
-		try{
-			GlobalVariable.detectCount=0;
-
-																														//@<OutputChild>
-			GlobalVariable.faceresult = GlobalVariable.robocam.getDetectResult();										//@<BlockInfo>jp.vstone.block.facedetect.isdetect,224,944,912,992,False,33,コメント@</BlockInfo>
-
-			if(GlobalVariable.faceresult.isDetect()) GlobalVariable.detectCount++;
-			else GlobalVariable.detectCount=0;
-
-			if(GlobalVariable.detectCount>(int)3)
-			{
-																														//@<OutputChild>
-				{																										//@<BlockInfo>jp.vstone.block.facedetect.gender2,288,848,640,848,False,32,@</BlockInfo>
-					boolean isMale=false,isFemale=false;
-					GlobalVariable.faceresult = GlobalVariable.robocam.getDetectResult();
-					if(GlobalVariable.faceresult.isMale()!=null) isMale = GlobalVariable.faceresult.isMale();
-					if(GlobalVariable.faceresult.isFemale()!=null) isFemale = GlobalVariable.faceresult.isFemale();
-
-					if( isMale )
-					{
-																														//@<OutputChild>
-					speechRecogResult = GlobalVariable.recog.getNamewithAbort((int)60000 , (int)3);						//@<BlockInfo>jp.vstone.block.talk.getname,352,800,576,800,False,37,音声認識を行い、名前を取得する。取得結果はメンバー変数のspeechRecogResultに格納される。@</BlockInfo>
-
-					if(speechRecogResult != null)
-					{
-																														//@<OutputChild>
-																														//@</OutputChild>
-
-					}else
-					{
-																														//@<OutputChild>
-																														//@</OutputChild>
-
-					}
-																														//@<EndOfBlock/>
-					GlobalVariable.faceresult = GlobalVariable.robocam.getDetectResult();								//@<BlockInfo>jp.vstone.block.facedetect.age.get2,448,848,448,848,False,31,現在認識している顔の年齢がfaceDetectResultAgeに格納される。顔が認識されない場合、faceDetectResultAgeに-1が代入される。@</BlockInfo>
-					faceDetectResultAge = GlobalVariable.faceresult.getAge();											//@<EndOfBlock/>
-																														//@</OutputChild>
-
-					}else if( isFemale )
-					{
-																														//@<OutputChild>
-																														//@</OutputChild>
-
-					}else
-					{
-																														//@<OutputChild>
-																														//@</OutputChild>
-
-					}
-				}
-																														//@<EndOfBlock/>
-																														//@</OutputChild>
-
-			}else
-			{
-																														//@<OutputChild>
-																														//@</OutputChild>
-
-			}
-																														//@<EndOfBlock/>
-																														//@</OutputChild>
-
-		}finally{
-			GlobalVariable.robocam.StopFaceDetect();
-		}
 																														//@<EndOfBlock/>
 																														//@</OutputChild>
 
