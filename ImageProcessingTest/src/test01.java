@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import org.opencv.core.Core;
 import org.opencv.core.Mat;
 import org.opencv.imgcodecs.Imgcodecs;
@@ -21,3 +22,14 @@ public class test01 {
         Imgcodecs.imwrite(path_out, mat_dst);
     }
 }
+=======
+
+public class test01 {
+
+	public static void main(String[] args) {
+		// TODO 自動生成されたメソッド・スタブ
+
+	}
+
+}
+>>>>>>> origin/master
